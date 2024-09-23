@@ -1,119 +1,127 @@
+#include <Arduino.h>
 #include <PID_v1.h>
 
-// Pin definitions
-const int motorIn1 = 8;
-const int motorIn2 = 9;
-const int motorIn3 = 7;
-const int motorIn4 = 6;
-const int motorEnA = 10;   // PWM pin for speed control
-const int motorEnB = 11;
-const int encoderA = 2;   // Encoder A output to interrupt pin
-const int encoderB = 3;   // Encoder B output to digital pin
-const int encoderC = 21;
-const int encoderD = 23;
+// Encoder Position Variables
+volatile long encoderPosition1 = 0;  // Position for encoder 1
+volatile long encoderPosition2 = 0;  // Position for encoder 2
+volatile long encoderPosition3 = 0;  // Position for encoder 3
+volatile long encoderPosition4 = 0;  // Position for encoder 4
 
-// Variables for encoder counts
-volatile long encoderCount1 = 0;  // Counts encoder pulses
-volatile long encoderCount2 = 0;
+// Motor Control Pins
+const int motorPins[4][3] = {
+  {2, 3, 4},   // Motor 1: Enable, IN1, IN2
+  {5, 6, 7},   // Motor 2: Enable, IN1, IN2
+  {8, 9, 10},  // Motor 3: Enable, IN1, IN2
+  {11, 12, 13} // Motor 4: Enable, IN1, IN2
+};
 
-// PID control parameters
-double setpointA = 150;  // Target for motor A
-double inputA = 0;       // Encoder input for motor A
-double outputA = 0;      // PID output for motor A
-double setpointB = 150;  // Target for motor B
-double inputB = 0;       // Encoder input for motor B
-double outputB = 0;      // PID output for motor B
+// Encoder Pins
+const int encoderPins[4] = {14, 15, 16, 17}; // Encoder pins (Channel A)
 
-// PID constants
-double KpA = 120, KiA = 15, KdA = 117;
-double KpB = 5, KiB = 9, KdB = 31;
+// PID Variables
+double setpoint[4], input[4], output[4];
+double kp = 1.0, ki = 0.5, kd = 0.1;  // Tune these values
+PID pids[4] = {
+  PID(&input[0], &output[0], &setpoint[0], kp, ki, kd, DIRECT),
+  PID(&input[1], &output[1], &setpoint[1], kp, ki, kd, DIRECT),
+  PID(&input[2], &output[2], &setpoint[2], kp, ki, kd, DIRECT),
+  PID(&input[3], &output[3], &setpoint[3], kp, ki, kd, DIRECT)
+};
 
-// PID objects for both motors
-PID motorA(&inputA, &outputA, &setpointA, KpA, KiA, KdA, DIRECT);
-PID motorB(&inputB, &outputB, &setpointB, KpB, KiB, KdB, DIRECT);
+// Velocity variables
+float vx = 0, vy = 0, omega = 0;  // Linear velocities and angular velocity
 
 void setup() {
-  // Motor pins as output
-  pinMode(motorIn1, OUTPUT);
-  pinMode(motorIn2, OUTPUT);
-  pinMode(motorIn3, OUTPUT);
-  pinMode(motorIn4, OUTPUT);
-  pinMode(motorEnA, OUTPUT);
-  pinMode(motorEnB, OUTPUT);
+  Serial.begin(115200); // UART Communication
 
-  // Encoder pins as input
-  pinMode(encoderA, INPUT);
-  pinMode(encoderB, INPUT);
-  pinMode(encoderC, INPUT);
-  pinMode(encoderD, INPUT);
+  // Set pin modes for motors and encoders
+  for (int i = 0; i < 4; i++) {
+    pinMode(motorPins[i][0], OUTPUT); // Enable pin
+    pinMode(motorPins[i][1], OUTPUT); // IN1
+    pinMode(motorPins[i][2], OUTPUT); // IN2
+    pinMode(encoderPins[i], INPUT);    // Encoder pins
+    pids[i].SetMode(AUTOMATIC);
+    pids[i].SetOutputLimits(0, 255); // PWM limits
+  }
 
-  // Attach interrupt for encoderA and encoderC
-  attachInterrupt(digitalPinToInterrupt(encoderA), updateEncoder1, RISING);
-  attachInterrupt(digitalPinToInterrupt(encoderC), updateEncoder2, RISING);
-
-  // PID configuration
-  motorA.SetMode(AUTOMATIC);
-  motorB.SetMode(AUTOMATIC);
-  motorA.SetSampleTime(100);  // PID update interval in ms
-  motorB.SetSampleTime(100);
-  motorA.SetOutputLimits(0, 255);  // PWM range for motor control
-  motorB.SetOutputLimits(0, 255);
-
-  // Serial monitor initialization
-  Serial.begin(9600);
+  // Attach interrupts for encoders
+  attachInterrupt(digitalPinToInterrupt(encoderPins[0]), encoder1ISR, CHANGE);
+  attachInterrupt(digitalPinToInterrupt(encoderPins[1]), encoder2ISR, CHANGE);
+  attachInterrupt(digitalPinToInterrupt(encoderPins[2]), encoder3ISR, CHANGE);
+  attachInterrupt(digitalPinToInterrupt(encoderPins[3]), encoder4ISR, CHANGE);
 }
 
 void loop() {
-  // Update the PID input with encoder counts
-  inputA = encoderCount1;
-  inputB = encoderCount2;
+  // Check if data is available from Raspberry Pi
+  if (Serial.available() > 0) {
+    String data = Serial.readStringUntil('\n');
+    parseWheelVelocities(data);
+    
+    // Read encoders and update PID control
+    for (int i = 0; i < 4; i++) {
+      input[i] = calculateCurrentSpeed(i);
+      pids[i].Compute(); // Update PID control
+      setMotorSpeed(i, output[i]);
+    }
+  }
 
-  // Compute the PID output
-  motorA.Compute();
-  motorB.Compute();
-
-  // Apply PID output to motor speed (PWM control)
-  analogWrite(motorEnA, outputA);
-  analogWrite(motorEnB, outputB);
-
-  // Set motor directions (assumed forward for both motors)
-  digitalWrite(motorIn1, HIGH);
-  digitalWrite(motorIn2, LOW);
-  digitalWrite(motorIn3, HIGH);
-  digitalWrite(motorIn4, LOW);
-
-  // Print encoder counts and PID outputs for debugging
-  Serial.print("Encoder Count 1: ");
-  Serial.println(encoderCount1);
-  Serial.print("PID Output A: ");
-  Serial.println(outputA);
-
-  Serial.print("Encoder Count 2: ");
-  Serial.println(encoderCount2);
-  Serial.print("PID Output B: ");
-  Serial.println(outputB);
-
-  delay(100);
+  // Optional: Print the current positions of all encoders
+  Serial.print("Encoder 1 Position: ");
+  Serial.println(encoderPosition1);
+  Serial.print("Encoder 2 Position: ");
+  Serial.println(encoderPosition2);
+  Serial.print("Encoder 3 Position: ");
+  Serial.println(encoderPosition3);
+  Serial.print("Encoder 4 Position: ");
+  Serial.println(encoderPosition4);
+  delay(200); // Slow down the output for readability
 }
 
-// Interrupt routine to count encoder pulses for motor A
-void updateEncoder1() {
-  int stateB = digitalRead(encoderB);
+// Parse the wheel velocities from Raspberry Pi
+void parseWheelVelocities(String data) {
+  // Expected format: "wheel1_velocity,wheel2_velocity,wheel3_velocity,wheel4_velocity"
+  sscanf(data.c_str(), "%lf,%lf,%lf,%lf", &setpoint[0], &setpoint[1], &setpoint[2], &setpoint[3]);
+}
 
-  if (stateB == HIGH) {
-    encoderCount1++;
+// Calculate current speed of the wheel using encoder feedback
+float calculateCurrentSpeed(int wheelIndex) {
+  // Use a simple conversion; adjust based on your encoder specs (PUT FORMULA HERE)
+  return encoderPosition1; // Placeholder; implement your actual speed calculation
+}
+
+// Set motor speed using PWM on the Enable pin and control direction with IN1 and IN2
+void setMotorSpeed(int motorIndex, double pwmValue) {
+  if (pwmValue > 0) {
+    digitalWrite(motorPins[motorIndex][1], HIGH); // IN1
+    digitalWrite(motorPins[motorIndex][2], LOW);  // IN2
+    analogWrite(motorPins[motorIndex][0], pwmValue); // Enable pin controls speed
+  } else if (pwmValue < 0) {
+    digitalWrite(motorPins[motorIndex][1], LOW);  // IN1
+    digitalWrite(motorPins[motorIndex][2], HIGH); // IN2
+    analogWrite(motorPins[motorIndex][0], -pwmValue); // Enable pin controls speed
   } else {
-    encoderCount1--;
+    digitalWrite(motorPins[motorIndex][0], LOW);  // Disable motor (no PWM signal)
+    digitalWrite(motorPins[motorIndex][1], LOW);  // Stop motor
+    digitalWrite(motorPins[motorIndex][2], LOW);  // Stop motor
   }
 }
 
-// Interrupt routine to count encoder pulses for motor B
-void updateEncoder2() {
-  int stateD = digitalRead(encoderD);
+// Interrupt service routine for encoder 1
+void encoder1ISR() {
+  encoderPosition1 += (digitalRead(encoderPins[0]) == HIGH) ? 1 : -1;
+}
 
-  if (stateD == HIGH) {
-    encoderCount2++;
-  } else {
-    encoderCount2--;
-  }
+// Interrupt service routine for encoder 2
+void encoder2ISR() {
+  encoderPosition2 += (digitalRead(encoderPins[1]) == HIGH) ? 1 : -1;
+}
+
+// Interrupt service routine for encoder 3
+void encoder3ISR() {
+  encoderPosition3 += (digitalRead(encoderPins[2]) == HIGH) ? 1 : -1;
+}
+
+// Interrupt service routine for encoder 4
+void encoder4ISR() {
+  encoderPosition4 += (digitalRead(encoderPins[3]) == HIGH) ? 1 : -1;
 }
