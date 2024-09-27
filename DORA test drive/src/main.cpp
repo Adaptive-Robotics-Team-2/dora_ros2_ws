@@ -21,12 +21,12 @@ const int motorPins[4][3] = {
 };
 
 // Encoder Pins (Channels A and B for each encoder)
-const int encoderPinsA[4] = {3, 2, 18, 19};   // Encoder Channel A pins
-const int encoderPinsB[4] = {53, 52, 51, 50}; // Encoder Channel B pins
+const int encoderPinsA[4] = {19, 18, 2, 3};   // Encoder Channel A pins
+const int encoderPinsB[4] = {50, 51, 53, 52}; // Encoder Channel B pins
 
 // PID Variables
 double setpoint[4], input[4], output[4];
-double kp = 1.0, ki = 0.5, kd = 0.1; // Tune these values
+double kp = 1.0, ki = 0, kd = 0; // Tune these values
 PID pids[4] = {
     PID(&input[0], &output[0], &setpoint[0], kp, ki, kd, DIRECT),
     PID(&input[1], &output[1], &setpoint[1], kp, ki, kd, DIRECT),
@@ -104,7 +104,7 @@ void setMotorSpeed(int motorIndex, double pwmValue)
   }
 }
 
-void parseWheelVelocities(const char * data)
+void parseWheelVelocities(const char *data)
 {
   // Expected format: "wheel1_velocity,wheel2_velocity,wheel3_velocity,wheel4_velocity"
   // sscanf(data.c_str(), "%lf,%lf,%lf,%lf", &setpoint[0], &setpoint[1], &setpoint[2], &setpoint[3]);
@@ -114,10 +114,10 @@ void parseWheelVelocities(const char * data)
   setpoint[2] = atof(strtok(NULL, ","));
   setpoint[3] = atof(strtok(NULL, ","));
 
-  Serial.println(setpoint[0]);
-  Serial.println(setpoint[1]);
-  Serial.println(setpoint[2]);
-  Serial.println(setpoint[3]);
+  // Serial.println(setpoint[0]);
+  // Serial.println(setpoint[1]);
+  // Serial.println(setpoint[2]);
+  // Serial.println(setpoint[3]);
 }
 
 // Calculate current speed of the wheel using encoder feedback in rad/s
@@ -174,18 +174,19 @@ float calculateCurrentSpeed(int wheelIndex)
 // Function to send raw encoder positions back to Raspberry Pi
 void sendEncoderData()
 {
-  Serial.print(encoderPosition1);
-  Serial.print(",");
-  Serial.print(encoderPosition2);
-  Serial.print(",");
-  Serial.print(encoderPosition3);
-  Serial.print(",");
-  Serial.println(encoderPosition4);
+  // Print encoder data to the serial monitor
+  Serial2.print(encoderPosition1);
+  Serial2.print(",");
+  Serial2.print(encoderPosition2);
+  Serial2.print(",");
+  Serial2.print(encoderPosition3);
+  Serial2.print(",");
+  Serial2.println(encoderPosition4);
 }
 
 void setup()
 {
-  Serial.begin(9600); // UART Communication
+  Serial2.begin(9600); // UART Communication
 
   for (int i = 0; i < 4; i++)
   {
@@ -211,7 +212,7 @@ void loop()
   if (Serial.available() > 0)
   {
     String readLine = Serial.readStringUntil('\n');
-    const char* data = readLine.c_str();
+    const char *data = readLine.c_str();
     Serial.println(data); // Echo back the received data for debugging
     parseWheelVelocities(data);
 
@@ -222,9 +223,8 @@ void loop()
       pids[i].Compute();                   // Update PID control
       setMotorSpeed(i, output[i]);         // Apply PID output to motor
     }
-
     // Send raw encoder data back to Raspberry Pi
-    // sendEncoderData();
+    sendEncoderData();
   }
 
   delay(200); // Slow down the output for readability
