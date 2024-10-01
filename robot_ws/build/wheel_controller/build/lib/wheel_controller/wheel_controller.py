@@ -9,6 +9,7 @@ import math
 import serial
 import tf2_ros
 
+
 class WheelController(Node):
     def __init__(self):
         super().__init__('wheel_controller')
@@ -91,38 +92,38 @@ class WheelController(Node):
     def publish_odometry(self):
         """ Publish the odometry message and broadcast the TF """
         wheel_data = self.read_wheel_data()
-        if wheel_data is None:
-            return
+        if wheel_data is not None:
+            # Update odometry only if new data is received
+            x, y, th, vx, vy, vth = self.compute_holonomic_odometry(wheel_data)
 
-        x, y, th, vx, vy, vth = self.compute_holonomic_odometry(wheel_data)
-        current_time = self.get_clock().now()
+            # Create and populate the Odometry message
+            odom = Odometry()
+            odom.header.stamp = self.get_clock().now().to_msg()
+            odom.header.frame_id = 'odom'
+            odom.child_frame_id = 'base_footprint'
 
-        odom = Odometry()
-        odom.header.stamp = current_time.to_msg()
-        odom.header.frame_id = 'odom'
-        odom.child_frame_id = 'base_link'
+            odom.pose.pose.position.x = self.x
+            odom.pose.pose.position.y = self.y
+            odom_quat = quaternion_from_euler(0, 0, self.th)
+            odom.pose.pose.orientation.x = odom_quat[0]
+            odom.pose.pose.orientation.y = odom_quat[1]
+            odom.pose.pose.orientation.z = odom_quat[2]
+            odom.pose.pose.orientation.w = odom_quat[3]
 
-        odom.pose.pose.position.x = x
-        odom.pose.pose.position.y = y
-        odom_quat = quaternion_from_euler(0, 0, th)
-        odom.pose.pose.orientation.x = odom_quat[0]
-        odom.pose.pose.orientation.y = odom_quat[1]
-        odom.pose.pose.orientation.z = odom_quat[2]
-        odom.pose.pose.orientation.w = odom_quat[3]
+            odom.twist.twist.linear.x = vx
+            odom.twist.twist.linear.y = vy
+            odom.twist.twist.angular.z = vth
 
-        odom.twist.twist.linear.x = vx
-        odom.twist.twist.linear.y = vy
-        odom.twist.twist.angular.z = vth
+            self.odom_pub.publish(odom)
 
-        self.odom_pub.publish(odom)
-
-        self.broadcast_dynamic_tf(x, y, th)
+            # Always broadcast the TF, even if wheel data is None
+        self.broadcast_dynamic_tf(self.x, self.y, self.th)
 
     def broadcast_dynamic_tf(self, x, y, th):
         t = TransformStamped()
         t.header.stamp = self.get_clock().now().to_msg()
         t.header.frame_id = 'odom'
-        t.child_frame_id = 'base_link'
+        t.child_frame_id = 'base_footprint'
 
         # Set translation
         t.transform.translation.x = x
@@ -164,7 +165,7 @@ class WheelController(Node):
         v_rr = (1 / r) * (vx - vy + (L + W) * wz)
 
         return v_fl, v_fr, v_rl, v_rr
-    
+
     def broadcast_static_tf(self):
         """
         Broadcast a static transform between base_link and laser, where the laser is 6 cm above base_link.
@@ -172,7 +173,7 @@ class WheelController(Node):
         static_transform_stamped = TransformStamped()
 
         static_transform_stamped.header.stamp = self.get_clock().now().to_msg()
-        static_transform_stamped.header.frame_id = 'base_link'
+        static_transform_stamped.header.frame_id = 'base_footprint'
         static_transform_stamped.child_frame_id = 'laser'
 
         # Laser is 6 cm above base_link

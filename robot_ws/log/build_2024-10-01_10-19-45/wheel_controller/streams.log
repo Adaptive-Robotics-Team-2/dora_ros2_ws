@@ -1,0 +1,21 @@
+[4.808s] Invoking command in '/home/dora/dora_ros2_ws/robot_ws/src/wheel_controller': PYTHONPATH=/home/dora/dora_ros2_ws/robot_ws/build/wheel_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/wheel_controller build --build-base /home/dora/dora_ros2_ws/robot_ws/build/wheel_controller/build install --record /home/dora/dora_ros2_ws/robot_ws/build/wheel_controller/install.log --single-version-externally-managed install_data
+[6.128s] running egg_info
+[6.130s] writing ../../build/wheel_controller/wheel_controller.egg-info/PKG-INFO
+[6.131s] writing dependency_links to ../../build/wheel_controller/wheel_controller.egg-info/dependency_links.txt
+[6.132s] writing entry points to ../../build/wheel_controller/wheel_controller.egg-info/entry_points.txt
+[6.133s] writing requirements to ../../build/wheel_controller/wheel_controller.egg-info/requires.txt
+[6.134s] writing top-level names to ../../build/wheel_controller/wheel_controller.egg-info/top_level.txt
+[6.142s] reading manifest file '../../build/wheel_controller/wheel_controller.egg-info/SOURCES.txt'
+[6.147s] writing manifest file '../../build/wheel_controller/wheel_controller.egg-info/SOURCES.txt'
+[6.148s] running build
+[6.149s] running build_py
+[6.150s] running install
+[6.152s] running install_lib
+[6.159s] running install_data
+[6.159s] running install_egg_info
+[6.167s] removing '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/python3.10/site-packages/wheel_controller-0.0.0-py3.10.egg-info' (and everything under it)
+[6.169s] Copying ../../build/wheel_controller/wheel_controller.egg-info to /home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/python3.10/site-packages/wheel_controller-0.0.0-py3.10.egg-info
+[6.176s] running install_scripts
+[6.259s] Installing wheel_controller script to /home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/wheel_controller
+[6.260s] writing list of installed files to '/home/dora/dora_ros2_ws/robot_ws/build/wheel_controller/install.log'
+[6.393s] Invoked command in '/home/dora/dora_ros2_ws/robot_ws/src/wheel_controller' returned '0': PYTHONPATH=/home/dora/dora_ros2_ws/robot_ws/build/wheel_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/wheel_controller build --build-base /home/dora/dora_ros2_ws/robot_ws/build/wheel_controller/build install --record /home/dora/dora_ros2_ws/robot_ws/build/wheel_controller/install.log --single-version-externally-managed install_data

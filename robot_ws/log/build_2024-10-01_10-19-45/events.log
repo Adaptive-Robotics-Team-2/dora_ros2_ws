@@ -1,0 +1,448 @@
+[0.000000] (-) TimerEvent: {}
+[0.004504] (encoder_odometry) JobQueued: {'identifier': 'encoder_odometry', 'dependencies': OrderedDict()}
+[0.004789] (encoder_odometrytest) JobQueued: {'identifier': 'encoder_odometrytest', 'dependencies': OrderedDict()}
+[0.004953] (rplidar_ros) JobQueued: {'identifier': 'rplidar_ros', 'dependencies': OrderedDict()}
+[0.005087] (serial_coms) JobQueued: {'identifier': 'serial_coms', 'dependencies': OrderedDict()}
+[0.005223] (velocity_controller) JobQueued: {'identifier': 'velocity_controller', 'dependencies': OrderedDict()}
+[0.005371] (wheel_controller) JobQueued: {'identifier': 'wheel_controller', 'dependencies': OrderedDict()}
+[0.005500] (encoder_odometry) JobStarted: {'identifier': 'encoder_odometry'}
+[0.103093] (-) TimerEvent: {}
+[0.165740] (encoder_odometrytest) JobStarted: {'identifier': 'encoder_odometrytest'}
+[0.210291] (-) TimerEvent: {}
+[0.232253] (rplidar_ros) JobStarted: {'identifier': 'rplidar_ros'}
+[0.282031] (serial_coms) JobStarted: {'identifier': 'serial_coms'}
+[0.322458] (-) TimerEvent: {}
+[0.428055] (-) TimerEvent: {}
+[0.529652] (-) TimerEvent: {}
+[0.632860] (-) TimerEvent: {}
+[0.735098] (-) TimerEvent: {}
+[0.838048] (-) TimerEvent: {}
+[0.949856] (-) TimerEvent: {}
+[1.051838] (-) TimerEvent: {}
+[1.153728] (-) TimerEvent: {}
+[1.255578] (-) TimerEvent: {}
+[1.357627] (-) TimerEvent: {}
+[1.460382] (-) TimerEvent: {}
+[1.561985] (-) TimerEvent: {}
+[1.663063] (-) TimerEvent: {}
+[1.765492] (-) TimerEvent: {}
+[1.868393] (-) TimerEvent: {}
+[1.972637] (-) TimerEvent: {}
+[2.075563] (-) TimerEvent: {}
+[2.178821] (-) TimerEvent: {}
+[2.281185] (-) TimerEvent: {}
+[2.384783] (-) TimerEvent: {}
+[2.487367] (-) TimerEvent: {}
+[2.596572] (-) TimerEvent: {}
+[2.703570] (-) TimerEvent: {}
+[2.806694] (-) TimerEvent: {}
+[2.909871] (-) TimerEvent: {}
+[3.020771] (-) TimerEvent: {}
+[3.123711] (-) TimerEvent: {}
+[3.226766] (-) TimerEvent: {}
+[3.329206] (-) TimerEvent: {}
+[3.430392] (-) TimerEvent: {}
+[3.531542] (-) TimerEvent: {}
+[3.632664] (-) TimerEvent: {}
+[3.734138] (-) TimerEvent: {}
+[3.837553] (-) TimerEvent: {}
+[3.940396] (-) TimerEvent: {}
+[4.041523] (-) TimerEvent: {}
+[4.142747] (-) TimerEvent: {}
+[4.243992] (-) TimerEvent: {}
+[4.346039] (-) TimerEvent: {}
+[4.447975] (-) TimerEvent: {}
+[4.549711] (-) TimerEvent: {}
+[4.651209] (-) TimerEvent: {}
+[4.754102] (-) TimerEvent: {}
+[4.856497] (-) TimerEvent: {}
+[4.959127] (-) TimerEvent: {}
+[5.061910] (-) TimerEvent: {}
+[5.164664] (-) TimerEvent: {}
+[5.267153] (-) TimerEvent: {}
+[5.369008] (-) TimerEvent: {}
+[5.471098] (-) TimerEvent: {}
+[5.576000] (-) TimerEvent: {}
+[5.622403] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'cmake'}
+[5.628008] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'build'}
+[5.631593] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dora/dora_ros2_ws/robot_ws/build/rplidar_ros', '--', '-j4', '-l4'], 'cwd': '/home/dora/dora_ros2_ws/robot_ws/build/rplidar_ros', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dora'), ('SSH_CLIENT', '172.20.10.2 51052 22'), ('LC_TIME', 'fr_FR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/dora'), ('TERM_PROGRAM_VERSION', '1.93.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-8bb52116-3210-4bb7-a8c4-b11882d1e724.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/dora/dora_ros2_ws/robot_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'dora'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '6'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/remote-cli:/home/dora/.local/bin:/opt/ros/humble/bin:/home/dora/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('RWM_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-443cefc6d1.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms:/home/dora/dora_ros2_ws/robot_ws/install/rplidar_ros:/home/dora/dora_ros2_ws/robot_ws/install/my_package:/home/dora/dora_ros2_ws/robot_ws/install/mecanum_controller:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/dora/dora_ros2_ws/robot_ws/build/rplidar_ros'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '172.20.10.2 51052 172.20.10.14 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/my_package/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/mecanum_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms:/home/dora/dora_ros2_ws/robot_ws/install/my_package:/home/dora/dora_ros2_ws/robot_ws/install/mecanum_controller:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry:/opt/ros/humble:/home/dora/dora_ros2_ws/robot_ws/install/rplidar_ros')]), 'shell': False}
+[5.676243] (-) TimerEvent: {}
+[5.779540] (-) TimerEvent: {}
+[5.855057] (rplidar_ros) StderrLine: {'line': b'\x1b[0mCMake Error: The current CMakeCache.txt directory /home/dora/dora_ros2_ws/robot_ws/build/rplidar_ros/CMakeCache.txt is different than the directory /home/dora/robot_ws/build/rplidar_ros where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt\x1b[0m\n'}
+[5.879786] (-) TimerEvent: {}
+[5.982303] (-) TimerEvent: {}
+[6.084489] (-) TimerEvent: {}
+[6.186041] (-) TimerEvent: {}
+[6.190822] (rplidar_ros) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[6.299475] (-) TimerEvent: {}
+[6.400447] (-) TimerEvent: {}
+[6.501859] (-) TimerEvent: {}
+[6.602983] (-) TimerEvent: {}
+[6.704006] (-) TimerEvent: {}
+[6.805119] (-) TimerEvent: {}
+[6.906540] (-) TimerEvent: {}
+[7.009307] (-) TimerEvent: {}
+[7.112286] (-) TimerEvent: {}
+[7.216860] (-) TimerEvent: {}
+[7.232566] (rplidar_ros) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[7.317012] (-) TimerEvent: {}
+[7.419533] (-) TimerEvent: {}
+[7.520643] (-) TimerEvent: {}
+[7.576762] (rplidar_ros) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[7.599433] (rplidar_ros) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[7.620837] (-) TimerEvent: {}
+[7.691687] (rplidar_ros) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[7.721023] (-) TimerEvent: {}
+[7.827981] (-) TimerEvent: {}
+[7.871253] (rplidar_ros) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[7.928196] (-) TimerEvent: {}
+[7.993460] (rplidar_ros) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.028856] (-) TimerEvent: {}
+[8.131722] (-) TimerEvent: {}
+[8.234629] (-) TimerEvent: {}
+[8.337450] (-) TimerEvent: {}
+[8.439240] (-) TimerEvent: {}
+[8.541352] (-) TimerEvent: {}
+[8.580842] (rplidar_ros) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[8.618716] (rplidar_ros) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[8.641630] (-) TimerEvent: {}
+[8.744978] (-) TimerEvent: {}
+[8.847697] (-) TimerEvent: {}
+[8.951118] (-) TimerEvent: {}
+[9.054385] (-) TimerEvent: {}
+[9.158257] (-) TimerEvent: {}
+[9.262104] (-) TimerEvent: {}
+[9.364517] (-) TimerEvent: {}
+[9.467462] (-) TimerEvent: {}
+[9.570041] (-) TimerEvent: {}
+[9.672433] (-) TimerEvent: {}
+[9.775055] (-) TimerEvent: {}
+[9.877815] (-) TimerEvent: {}
+[9.980786] (-) TimerEvent: {}
+[10.083239] (-) TimerEvent: {}
+[10.185798] (-) TimerEvent: {}
+[10.287282] (-) TimerEvent: {}
+[10.389647] (-) TimerEvent: {}
+[10.491567] (-) TimerEvent: {}
+[10.522131] (rplidar_ros) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[10.591779] (-) TimerEvent: {}
+[10.694454] (-) TimerEvent: {}
+[10.798960] (-) TimerEvent: {}
+[10.902264] (-) TimerEvent: {}
+[11.003324] (-) TimerEvent: {}
+[11.104612] (-) TimerEvent: {}
+[11.149233] (rplidar_ros) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[11.206041] (-) TimerEvent: {}
+[11.306848] (-) TimerEvent: {}
+[11.352655] (rplidar_ros) StdoutLine: {'line': b'-- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)\n'}
+[11.407118] (-) TimerEvent: {}
+[11.507980] (-) TimerEvent: {}
+[11.609023] (-) TimerEvent: {}
+[11.710834] (-) TimerEvent: {}
+[11.813061] (-) TimerEvent: {}
+[11.915041] (-) TimerEvent: {}
+[11.970666] (serial_coms) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/serial_coms', 'build', '--build-base', '/home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build', 'install', '--record', '/home/dora/dora_ros2_ws/robot_ws/build/serial_coms/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/dora/dora_ros2_ws/robot_ws/src/serial_coms', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'dora', 'SSH_CLIENT': '172.20.10.2 51052 22', 'LC_TIME': 'fr_FR.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/dora', 'TERM_PROGRAM_VERSION': '1.93.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-8bb52116-3210-4bb7-a8c4-b11882d1e724.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'fr_FR.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/dora/dora_ros2_ws/robot_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'dora', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '6', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/remote-cli:/home/dora/.local/bin:/opt/ros/humble/bin:/home/dora/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'fr_FR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'RWM_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LC_TELEPHONE': 'fr_FR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-443cefc6d1.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms:/home/dora/dora_ros2_ws/robot_ws/install/rplidar_ros:/home/dora/dora_ros2_ws/robot_ws/install/my_package:/home/dora/dora_ros2_ws/robot_ws/install/mecanum_controller:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'fr_FR.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'fr_FR.UTF-8', 'LC_IDENTIFICATION': 'fr_FR.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/dora/dora_ros2_ws/robot_ws/build/serial_coms', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '172.20.10.2 51052 172.20.10.14 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/dora/dora_ros2_ws/robot_ws/build/serial_coms/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/my_package/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/mecanum_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'fr_FR.UTF-8', 'LC_PAPER': 'fr_FR.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/dora/dora_ros2_ws/robot_ws/install/rplidar_ros'}, 'shell': False}
+[12.012327] (encoder_odometrytest) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/encoder_odometrytest', 'build', '--build-base', '/home/dora/dora_ros2_ws/robot_ws/build/encoder_odometrytest/build', 'install', '--record', '/home/dora/dora_ros2_ws/robot_ws/build/encoder_odometrytest/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/dora/dora_ros2_ws/robot_ws/src/encoder_odometrytest', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'dora', 'SSH_CLIENT': '172.20.10.2 51052 22', 'LC_TIME': 'fr_FR.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/dora', 'TERM_PROGRAM_VERSION': '1.93.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-8bb52116-3210-4bb7-a8c4-b11882d1e724.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'fr_FR.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/dora/dora_ros2_ws/robot_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'dora', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '6', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/remote-cli:/home/dora/.local/bin:/opt/ros/humble/bin:/home/dora/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'fr_FR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'RWM_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LC_TELEPHONE': 'fr_FR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-443cefc6d1.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms:/home/dora/dora_ros2_ws/robot_ws/install/rplidar_ros:/home/dora/dora_ros2_ws/robot_ws/install/my_package:/home/dora/dora_ros2_ws/robot_ws/install/mecanum_controller:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'fr_FR.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'fr_FR.UTF-8', 'LC_IDENTIFICATION': 'fr_FR.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/dora/dora_ros2_ws/robot_ws/build/encoder_odometrytest', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '172.20.10.2 51052 172.20.10.14 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/dora/dora_ros2_ws/robot_ws/build/encoder_odometrytest/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/my_package/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/mecanum_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'fr_FR.UTF-8', 'LC_PAPER': 'fr_FR.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/dora/dora_ros2_ws/robot_ws/install/rplidar_ros'}, 'shell': False}
+[12.018857] (-) TimerEvent: {}
+[12.039920] (encoder_odometry) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/encoder_odometry', 'build', '--build-base', '/home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/build', 'install', '--record', '/home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/dora/dora_ros2_ws/robot_ws/src/encoder_odometry', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'dora', 'SSH_CLIENT': '172.20.10.2 51052 22', 'LC_TIME': 'fr_FR.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/dora', 'TERM_PROGRAM_VERSION': '1.93.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-8bb52116-3210-4bb7-a8c4-b11882d1e724.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'fr_FR.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/dora/dora_ros2_ws/robot_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'dora', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '6', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/remote-cli:/home/dora/.local/bin:/opt/ros/humble/bin:/home/dora/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'fr_FR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'RWM_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LC_TELEPHONE': 'fr_FR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-443cefc6d1.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms:/home/dora/dora_ros2_ws/robot_ws/install/rplidar_ros:/home/dora/dora_ros2_ws/robot_ws/install/my_package:/home/dora/dora_ros2_ws/robot_ws/install/mecanum_controller:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'fr_FR.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'fr_FR.UTF-8', 'LC_IDENTIFICATION': 'fr_FR.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '172.20.10.2 51052 172.20.10.14 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/my_package/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/mecanum_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'fr_FR.UTF-8', 'LC_PAPER': 'fr_FR.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/dora/dora_ros2_ws/robot_ws/install/rplidar_ros'}, 'shell': False}
+[12.182679] (-) TimerEvent: {}
+[12.230048] (rplidar_ros) StdoutLine: {'line': b'-- Configuring done\n'}
+[12.282895] (-) TimerEvent: {}
+[12.384033] (-) TimerEvent: {}
+[12.430558] (rplidar_ros) StdoutLine: {'line': b'-- Generating done\n'}
+[12.447627] (rplidar_ros) StdoutLine: {'line': b'-- Build files have been written to: /home/dora/robot_ws/build/rplidar_ros\n'}
+[12.484542] (-) TimerEvent: {}
+[12.585715] (-) TimerEvent: {}
+[12.686866] (-) TimerEvent: {}
+[12.743704] (rplidar_ros) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target rplidar_composition\x1b[0m\n'}
+[12.751095] (rplidar_ros) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target rplidar_client\x1b[0m\n'}
+[12.786869] (rplidar_ros) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target rplidar_node\x1b[0m\n'}
+[12.787669] (-) TimerEvent: {}
+[12.891189] (-) TimerEvent: {}
+[12.993519] (-) TimerEvent: {}
+[13.083533] (rplidar_ros) StdoutLine: {'line': b'[ 47%] Built target rplidar_composition\n'}
+[13.093754] (-) TimerEvent: {}
+[13.108542] (rplidar_ros) StdoutLine: {'line': b'[ 52%] Built target rplidar_client\n'}
+[13.119370] (rplidar_ros) StdoutLine: {'line': b'[100%] Built target rplidar_node\n'}
+[13.184429] (rplidar_ros) CommandEnded: {'returncode': 0}
+[13.193984] (-) TimerEvent: {}
+[13.296633] (-) TimerEvent: {}
+[13.399283] (-) TimerEvent: {}
+[13.502049] (-) TimerEvent: {}
+[13.604800] (-) TimerEvent: {}
+[13.707530] (-) TimerEvent: {}
+[13.731707] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'install'}
+[13.783283] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dora/dora_ros2_ws/robot_ws/build/rplidar_ros'], 'cwd': '/home/dora/dora_ros2_ws/robot_ws/build/rplidar_ros', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dora'), ('SSH_CLIENT', '172.20.10.2 51052 22'), ('LC_TIME', 'fr_FR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/dora'), ('TERM_PROGRAM_VERSION', '1.93.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-8bb52116-3210-4bb7-a8c4-b11882d1e724.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/dora/dora_ros2_ws/robot_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'dora'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '6'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/remote-cli:/home/dora/.local/bin:/opt/ros/humble/bin:/home/dora/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('RWM_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-443cefc6d1.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms:/home/dora/dora_ros2_ws/robot_ws/install/rplidar_ros:/home/dora/dora_ros2_ws/robot_ws/install/my_package:/home/dora/dora_ros2_ws/robot_ws/install/mecanum_controller:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/dora/dora_ros2_ws/robot_ws/build/rplidar_ros'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '172.20.10.2 51052 172.20.10.14 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/my_package/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/mecanum_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms:/home/dora/dora_ros2_ws/robot_ws/install/my_package:/home/dora/dora_ros2_ws/robot_ws/install/mecanum_controller:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry:/opt/ros/humble:/home/dora/dora_ros2_ws/robot_ws/install/rplidar_ros')]), 'shell': False}
+[13.807780] (-) TimerEvent: {}
+[13.833929] (rplidar_ros) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[13.838141] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch\n'}
+[13.842514] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m12.launch\n'}
+[13.843600] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a1.launch\n'}
+[13.845760] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_c1.launch\n'}
+[13.846974] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2e_launch.py\n'}
+[13.848955] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_launch.py\n'}
+[13.849928] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a1_launch.py\n'}
+[13.851983] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2.launch\n'}
+[13.853618] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m8_launch.py\n'}
+[13.855125] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_c1_launch.py\n'}
+[13.856991] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s3.launch\n'}
+[13.858120] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a1_launch.py\n'}
+[13.859966] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_launch.py\n'}
+[13.862065] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2_launch.py\n'}
+[13.862886] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3_launch.py\n'}
+[13.863530] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/test_rplidar.launch\n'}
+[13.867219] (encoder_odometrytest) StdoutLine: {'line': b'running egg_info\n'}
+[13.869548] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m12.launch\n'}
+[13.878418] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s3_launch.py\n'}
+[13.878988] (encoder_odometrytest) StdoutLine: {'line': b'writing ../../build/encoder_odometrytest/encoder_odometrytest.egg-info/PKG-INFO\n'}
+[13.879483] (encoder_odometrytest) StdoutLine: {'line': b'writing dependency_links to ../../build/encoder_odometrytest/encoder_odometrytest.egg-info/dependency_links.txt\n'}
+[13.879996] (encoder_odometrytest) StdoutLine: {'line': b'writing entry points to ../../build/encoder_odometrytest/encoder_odometrytest.egg-info/entry_points.txt\n'}
+[13.880459] (encoder_odometrytest) StdoutLine: {'line': b'writing requirements to ../../build/encoder_odometrytest/encoder_odometrytest.egg-info/requires.txt\n'}
+[13.880976] (encoder_odometrytest) StdoutLine: {'line': b'writing top-level names to ../../build/encoder_odometrytest/encoder_odometrytest.egg-info/top_level.txt\n'}
+[13.881448] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_c1_launch.py\n'}
+[13.881941] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp.launch\n'}
+[13.882423] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3.launch\n'}
+[13.883162] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s3_launch.py\n'}
+[13.883754] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp_launch.py\n'}
+[13.884331] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2e.launch\n'}
+[13.898063] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2e_launch.py\n'}
+[13.898647] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s3.launch\n'}
+[13.899223] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m7.launch\n'}
+[13.899704] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m7.launch\n'}
+[13.900192] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2_launch.py\n'}
+[13.900723] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m12_launch.py\n'}
+[13.911627] (-) TimerEvent: {}
+[13.914885] (encoder_odometrytest) StdoutLine: {'line': b"reading manifest file '../../build/encoder_odometrytest/encoder_odometrytest.egg-info/SOURCES.txt'\n"}
+[13.915575] (encoder_odometrytest) StdoutLine: {'line': b"writing manifest file '../../build/encoder_odometrytest/encoder_odometrytest.egg-info/SOURCES.txt'\n"}
+[13.916198] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/test_rplidar_a3.launch\n'}
+[13.916974] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m7_launch.py\n'}
+[13.925100] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1.launch\n'}
+[13.929430] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a1.launch\n'}
+[13.930765] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2e.launch\n'}
+[13.931380] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp.launch\n'}
+[13.935862] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m7_launch.py\n'}
+[13.937520] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_t1_launch.py\n'}
+[13.940639] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m8.launch\n'}
+[13.941680] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m12_launch.py\n'}
+[13.942387] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2.launch\n'}
+[13.943020] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1.launch\n'}
+[13.949680] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m8_launch.py\n'}
+[13.950202] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_t1.launch\n'}
+[13.950846] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3_launch.py\n'}
+[13.952144] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3.launch\n'}
+[13.956087] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_t1.launch\n'}
+[13.959181] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp_launch.py\n'}
+[13.961331] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m8.launch\n'}
+[13.961955] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_t1_launch.py\n'}
+[13.962487] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_c1.launch\n'}
+[13.963114] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/rviz\n'}
+[13.963667] (encoder_odometrytest) StdoutLine: {'line': b'running build\n'}
+[13.964276] (encoder_odometrytest) StdoutLine: {'line': b'running build_py\n'}
+[13.969996] (encoder_odometrytest) StdoutLine: {'line': b'running install\n'}
+[13.970955] (encoder_odometrytest) StdoutLine: {'line': b'running install_lib\n'}
+[13.971577] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/rviz/rplidar_ros.rviz\n'}
+[13.972206] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/rviz/rplidar.rviz\n'}
+[13.973080] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_node\n'}
+[13.973824] (encoder_odometrytest) StdoutLine: {'line': b'running install_data\n'}
+[13.974518] (encoder_odometrytest) StdoutLine: {'line': b'running install_egg_info\n'}
+[13.975616] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition\n'}
+[13.976758] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_client\n'}
+[13.978118] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros\n'}
+[13.978954] (rplidar_ros) StdoutLine: {'line': b'-- Installing: /home/dora/robot_ws/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros\n'}
+[13.979599] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh\n'}
+[13.980195] (rplidar_ros) StdoutLine: {'line': b'-- Installing: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv\n'}
+[14.019353] (-) TimerEvent: {}
+[14.024206] (encoder_odometrytest) StdoutLine: {'line': b"removing '/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest/lib/python3.10/site-packages/encoder_odometrytest-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[14.027177] (encoder_odometrytest) StdoutLine: {'line': b'Copying ../../build/encoder_odometrytest/encoder_odometrytest.egg-info to /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest/lib/python3.10/site-packages/encoder_odometrytest-0.0.0-py3.10.egg-info\n'}
+[14.028006] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/environment/path.sh\n'}
+[14.029795] (rplidar_ros) StdoutLine: {'line': b'-- Installing: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/environment/path.dsv\n'}
+[14.030805] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/local_setup.bash\n'}
+[14.031677] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/local_setup.sh\n'}
+[14.032451] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/local_setup.zsh\n'}
+[14.033181] (rplidar_ros) StdoutLine: {'line': b'-- Installing: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/local_setup.dsv\n'}
+[14.034130] (rplidar_ros) StdoutLine: {'line': b'-- Installing: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/package.dsv\n'}
+[14.034883] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros\n'}
+[14.035564] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[14.036328] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[14.043905] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake\n'}
+[14.055586] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake\n'}
+[14.056375] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /home/dora/robot_ws/install/rplidar_ros/share/rplidar_ros/package.xml\n'}
+[14.057074] (encoder_odometrytest) StdoutLine: {'line': b'running install_scripts\n'}
+[14.057816] (rplidar_ros) CommandEnded: {'returncode': 0}
+[14.069209] (serial_coms) StdoutLine: {'line': b'running egg_info\n'}
+[14.080164] (serial_coms) StdoutLine: {'line': b'writing ../../build/serial_coms/serial_coms.egg-info/PKG-INFO\n'}
+[14.086723] (serial_coms) StdoutLine: {'line': b'writing dependency_links to ../../build/serial_coms/serial_coms.egg-info/dependency_links.txt\n'}
+[14.089696] (serial_coms) StdoutLine: {'line': b'writing entry points to ../../build/serial_coms/serial_coms.egg-info/entry_points.txt\n'}
+[14.090518] (serial_coms) StdoutLine: {'line': b'writing requirements to ../../build/serial_coms/serial_coms.egg-info/requires.txt\n'}
+[14.091515] (serial_coms) StdoutLine: {'line': b'writing top-level names to ../../build/serial_coms/serial_coms.egg-info/top_level.txt\n'}
+[14.093136] (serial_coms) StdoutLine: {'line': b"reading manifest file '../../build/serial_coms/serial_coms.egg-info/SOURCES.txt'\n"}
+[14.101071] (serial_coms) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[14.102492] (serial_coms) StdoutLine: {'line': b"writing manifest file '../../build/serial_coms/serial_coms.egg-info/SOURCES.txt'\n"}
+[14.103860] (serial_coms) StdoutLine: {'line': b'running build\n'}
+[14.105472] (serial_coms) StdoutLine: {'line': b'running build_py\n'}
+[14.106754] (encoder_odometrytest) StdoutLine: {'line': b'Installing encoder_to_odom script to /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest/lib/encoder_odometrytest\n'}
+[14.108190] (encoder_odometrytest) StdoutLine: {'line': b"writing list of installed files to '/home/dora/dora_ros2_ws/robot_ws/build/encoder_odometrytest/install.log'\n"}
+[14.109549] (serial_coms) StdoutLine: {'line': b'running install\n'}
+[14.110647] (serial_coms) StdoutLine: {'line': b'running install_lib\n'}
+[14.119801] (serial_coms) StdoutLine: {'line': b'running install_data\n'}
+[14.121201] (-) TimerEvent: {}
+[14.124763] (serial_coms) StdoutLine: {'line': b'running install_egg_info\n'}
+[14.147619] (serial_coms) StdoutLine: {'line': b"removing '/home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages/serial_coms-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[14.168506] (serial_coms) StdoutLine: {'line': b'Copying ../../build/serial_coms/serial_coms.egg-info to /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages/serial_coms-0.0.0-py3.10.egg-info\n'}
+[14.172083] (encoder_odometry) StdoutLine: {'line': b'running egg_info\n'}
+[14.177081] (encoder_odometry) StdoutLine: {'line': b'writing ../../build/encoder_odometry/encoder_odometry.egg-info/PKG-INFO\n'}
+[14.179682] (encoder_odometry) StdoutLine: {'line': b'writing dependency_links to ../../build/encoder_odometry/encoder_odometry.egg-info/dependency_links.txt\n'}
+[14.181960] (encoder_odometry) StdoutLine: {'line': b'writing entry points to ../../build/encoder_odometry/encoder_odometry.egg-info/entry_points.txt\n'}
+[14.184883] (encoder_odometry) StdoutLine: {'line': b'writing requirements to ../../build/encoder_odometry/encoder_odometry.egg-info/requires.txt\n'}
+[14.188837] (encoder_odometry) StdoutLine: {'line': b'writing top-level names to ../../build/encoder_odometry/encoder_odometry.egg-info/top_level.txt\n'}
+[14.200012] (encoder_odometry) StdoutLine: {'line': b"reading manifest file '../../build/encoder_odometry/encoder_odometry.egg-info/SOURCES.txt'\n"}
+[14.205652] (serial_coms) StdoutLine: {'line': b'running install_scripts\n'}
+[14.207321] (encoder_odometry) StdoutLine: {'line': b"writing manifest file '../../build/encoder_odometry/encoder_odometry.egg-info/SOURCES.txt'\n"}
+[14.208417] (encoder_odometry) StdoutLine: {'line': b'running build\n'}
+[14.209158] (encoder_odometry) StdoutLine: {'line': b'running build_py\n'}
+[14.210256] (encoder_odometry) StdoutLine: {'line': b'running install\n'}
+[14.212050] (encoder_odometry) StdoutLine: {'line': b'running install_lib\n'}
+[14.221611] (-) TimerEvent: {}
+[14.227383] (encoder_odometry) StdoutLine: {'line': b'running install_data\n'}
+[14.241673] (encoder_odometry) StdoutLine: {'line': b'running install_egg_info\n'}
+[14.250601] (encoder_odometry) StdoutLine: {'line': b"removing '/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages/encoder_odometry-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[14.252301] (encoder_odometry) StdoutLine: {'line': b'Copying ../../build/encoder_odometry/encoder_odometry.egg-info to /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages/encoder_odometry-0.0.0-py3.10.egg-info\n'}
+[14.269619] (encoder_odometry) StdoutLine: {'line': b'running install_scripts\n'}
+[14.316560] (encoder_odometrytest) CommandEnded: {'returncode': 0}
+[14.321977] (-) TimerEvent: {}
+[14.368335] (serial_coms) StdoutLine: {'line': b"writing list of installed files to '/home/dora/dora_ros2_ws/robot_ws/build/serial_coms/install.log'\n"}
+[14.385099] (encoder_odometrytest) JobEnded: {'identifier': 'encoder_odometrytest', 'rc': 0}
+[14.394076] (velocity_controller) JobStarted: {'identifier': 'velocity_controller'}
+[14.395285] (encoder_odometry) StdoutLine: {'line': b'Installing encoder_to_odom script to /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/encoder_odometry\n'}
+[14.397641] (encoder_odometry) StdoutLine: {'line': b"writing list of installed files to '/home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/install.log'\n"}
+[14.422325] (-) TimerEvent: {}
+[14.523906] (-) TimerEvent: {}
+[14.624885] (-) TimerEvent: {}
+[14.726002] (-) TimerEvent: {}
+[14.827508] (-) TimerEvent: {}
+[14.930221] (-) TimerEvent: {}
+[15.031006] (-) TimerEvent: {}
+[15.131718] (-) TimerEvent: {}
+[15.233574] (-) TimerEvent: {}
+[15.334950] (-) TimerEvent: {}
+[15.435762] (-) TimerEvent: {}
+[15.536599] (-) TimerEvent: {}
+[15.637481] (-) TimerEvent: {}
+[15.738211] (-) TimerEvent: {}
+[15.839175] (-) TimerEvent: {}
+[15.920217] (encoder_odometry) CommandEnded: {'returncode': 0}
+[15.939309] (-) TimerEvent: {}
+[15.954943] (encoder_odometry) JobEnded: {'identifier': 'encoder_odometry', 'rc': 0}
+[15.988812] (rplidar_ros) JobEnded: {'identifier': 'rplidar_ros', 'rc': 0}
+[15.991489] (serial_coms) CommandEnded: {'returncode': 0}
+[16.039666] (-) TimerEvent: {}
+[16.043736] (serial_coms) JobEnded: {'identifier': 'serial_coms', 'rc': 0}
+[16.051471] (wheel_controller) JobStarted: {'identifier': 'wheel_controller'}
+[16.139949] (-) TimerEvent: {}
+[16.241111] (-) TimerEvent: {}
+[16.341975] (-) TimerEvent: {}
+[16.443434] (-) TimerEvent: {}
+[16.544781] (-) TimerEvent: {}
+[16.645517] (-) TimerEvent: {}
+[16.746316] (-) TimerEvent: {}
+[16.847040] (-) TimerEvent: {}
+[16.947888] (-) TimerEvent: {}
+[17.048780] (-) TimerEvent: {}
+[17.149525] (-) TimerEvent: {}
+[17.250432] (-) TimerEvent: {}
+[17.351273] (-) TimerEvent: {}
+[17.452104] (-) TimerEvent: {}
+[17.553684] (-) TimerEvent: {}
+[17.655762] (-) TimerEvent: {}
+[17.757226] (-) TimerEvent: {}
+[17.858291] (-) TimerEvent: {}
+[17.959192] (-) TimerEvent: {}
+[18.060151] (-) TimerEvent: {}
+[18.161372] (-) TimerEvent: {}
+[18.262807] (-) TimerEvent: {}
+[18.363883] (-) TimerEvent: {}
+[18.465215] (-) TimerEvent: {}
+[18.543380] (velocity_controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/velocity_controller', 'build', '--build-base', '/home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/build', 'install', '--record', '/home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/dora/dora_ros2_ws/robot_ws/src/velocity_controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'dora', 'SSH_CLIENT': '172.20.10.2 51052 22', 'LC_TIME': 'fr_FR.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/dora', 'TERM_PROGRAM_VERSION': '1.93.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-8bb52116-3210-4bb7-a8c4-b11882d1e724.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'fr_FR.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/dora/dora_ros2_ws/robot_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'dora', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '6', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/remote-cli:/home/dora/.local/bin:/opt/ros/humble/bin:/home/dora/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'fr_FR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'RWM_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LC_TELEPHONE': 'fr_FR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-443cefc6d1.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms:/home/dora/dora_ros2_ws/robot_ws/install/rplidar_ros:/home/dora/dora_ros2_ws/robot_ws/install/my_package:/home/dora/dora_ros2_ws/robot_ws/install/mecanum_controller:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'fr_FR.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'fr_FR.UTF-8', 'LC_IDENTIFICATION': 'fr_FR.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/dora/dora_ros2_ws/robot_ws/build/velocity_controller', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '172.20.10.2 51052 172.20.10.14 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/my_package/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/mecanum_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'fr_FR.UTF-8', 'LC_PAPER': 'fr_FR.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/dora/dora_ros2_ws/robot_ws/install/rplidar_ros'}, 'shell': False}
+[18.565420] (-) TimerEvent: {}
+[18.667920] (-) TimerEvent: {}
+[18.769840] (-) TimerEvent: {}
+[18.871810] (-) TimerEvent: {}
+[18.974004] (-) TimerEvent: {}
+[19.076689] (-) TimerEvent: {}
+[19.178776] (-) TimerEvent: {}
+[19.281775] (-) TimerEvent: {}
+[19.385098] (-) TimerEvent: {}
+[19.488067] (-) TimerEvent: {}
+[19.592565] (-) TimerEvent: {}
+[19.696454] (-) TimerEvent: {}
+[19.800638] (-) TimerEvent: {}
+[19.903317] (-) TimerEvent: {}
+[20.006478] (-) TimerEvent: {}
+[20.109767] (-) TimerEvent: {}
+[20.212393] (-) TimerEvent: {}
+[20.313981] (-) TimerEvent: {}
+[20.414993] (-) TimerEvent: {}
+[20.516282] (-) TimerEvent: {}
+[20.582517] (velocity_controller) StdoutLine: {'line': b'running egg_info\n'}
+[20.585234] (velocity_controller) StdoutLine: {'line': b'writing ../../build/velocity_controller/velocity_controller.egg-info/PKG-INFO\n'}
+[20.587169] (velocity_controller) StdoutLine: {'line': b'writing dependency_links to ../../build/velocity_controller/velocity_controller.egg-info/dependency_links.txt\n'}
+[20.590879] (velocity_controller) StdoutLine: {'line': b'writing entry points to ../../build/velocity_controller/velocity_controller.egg-info/entry_points.txt\n'}
+[20.591425] (velocity_controller) StdoutLine: {'line': b'writing requirements to ../../build/velocity_controller/velocity_controller.egg-info/requires.txt\n'}
+[20.591939] (velocity_controller) StdoutLine: {'line': b'writing top-level names to ../../build/velocity_controller/velocity_controller.egg-info/top_level.txt\n'}
+[20.598630] (velocity_controller) StdoutLine: {'line': b"reading manifest file '../../build/velocity_controller/velocity_controller.egg-info/SOURCES.txt'\n"}
+[20.604259] (velocity_controller) StdoutLine: {'line': b"writing manifest file '../../build/velocity_controller/velocity_controller.egg-info/SOURCES.txt'\n"}
+[20.605289] (velocity_controller) StdoutLine: {'line': b'running build\n'}
+[20.605805] (velocity_controller) StdoutLine: {'line': b'running build_py\n'}
+[20.606793] (velocity_controller) StdoutLine: {'line': b'running install\n'}
+[20.608123] (velocity_controller) StdoutLine: {'line': b'running install_lib\n'}
+[20.614512] (velocity_controller) StdoutLine: {'line': b'running install_data\n'}
+[20.615551] (velocity_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[20.616417] (-) TimerEvent: {}
+[20.628202] (velocity_controller) StdoutLine: {'line': b"removing '/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages/velocity_controller-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[20.632579] (velocity_controller) StdoutLine: {'line': b'Copying ../../build/velocity_controller/velocity_controller.egg-info to /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages/velocity_controller-0.0.0-py3.10.egg-info\n'}
+[20.653424] (velocity_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[20.716738] (-) TimerEvent: {}
+[20.781531] (velocity_controller) StdoutLine: {'line': b'Installing velocity_controller script to /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/velocity_controller\n'}
+[20.785547] (velocity_controller) StdoutLine: {'line': b"writing list of installed files to '/home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/install.log'\n"}
+[20.820838] (-) TimerEvent: {}
+[20.854747] (wheel_controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/wheel_controller', 'build', '--build-base', '/home/dora/dora_ros2_ws/robot_ws/build/wheel_controller/build', 'install', '--record', '/home/dora/dora_ros2_ws/robot_ws/build/wheel_controller/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/dora/dora_ros2_ws/robot_ws/src/wheel_controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'dora', 'SSH_CLIENT': '172.20.10.2 51052 22', 'LC_TIME': 'fr_FR.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/dora', 'TERM_PROGRAM_VERSION': '1.93.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-8bb52116-3210-4bb7-a8c4-b11882d1e724.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'fr_FR.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/dora/dora_ros2_ws/robot_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'dora', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '6', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/dora/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/remote-cli:/home/dora/.local/bin:/opt/ros/humble/bin:/home/dora/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'fr_FR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'RWM_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LC_TELEPHONE': 'fr_FR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-443cefc6d1.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms:/home/dora/dora_ros2_ws/robot_ws/install/rplidar_ros:/home/dora/dora_ros2_ws/robot_ws/install/my_package:/home/dora/dora_ros2_ws/robot_ws/install/mecanum_controller:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'fr_FR.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'fr_FR.UTF-8', 'LC_IDENTIFICATION': 'fr_FR.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/dora/dora_ros2_ws/robot_ws/build/wheel_controller', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '172.20.10.2 51052 172.20.10.14 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/dora/dora_ros2_ws/robot_ws/build/wheel_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/my_package/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/mecanum_controller/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest/lib/python3.10/site-packages:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'fr_FR.UTF-8', 'LC_PAPER': 'fr_FR.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/dora/dora_ros2_ws/robot_ws/install/rplidar_ros'}, 'shell': False}
+[20.921097] (-) TimerEvent: {}
+[20.966632] (velocity_controller) CommandEnded: {'returncode': 0}
+[21.021324] (-) TimerEvent: {}
+[21.026425] (velocity_controller) JobEnded: {'identifier': 'velocity_controller', 'rc': 0}
+[21.121612] (-) TimerEvent: {}
+[21.222452] (-) TimerEvent: {}
+[21.323889] (-) TimerEvent: {}
+[21.425325] (-) TimerEvent: {}
+[21.526115] (-) TimerEvent: {}
+[21.626877] (-) TimerEvent: {}
+[21.727603] (-) TimerEvent: {}
+[21.828406] (-) TimerEvent: {}
+[21.929361] (-) TimerEvent: {}
+[22.030077] (-) TimerEvent: {}
+[22.130776] (-) TimerEvent: {}
+[22.179558] (wheel_controller) StdoutLine: {'line': b'running egg_info\n'}
+[22.182089] (wheel_controller) StdoutLine: {'line': b'writing ../../build/wheel_controller/wheel_controller.egg-info/PKG-INFO\n'}
+[22.183127] (wheel_controller) StdoutLine: {'line': b'writing dependency_links to ../../build/wheel_controller/wheel_controller.egg-info/dependency_links.txt\n'}
+[22.184177] (wheel_controller) StdoutLine: {'line': b'writing entry points to ../../build/wheel_controller/wheel_controller.egg-info/entry_points.txt\n'}
+[22.185210] (wheel_controller) StdoutLine: {'line': b'writing requirements to ../../build/wheel_controller/wheel_controller.egg-info/requires.txt\n'}
+[22.185852] (wheel_controller) StdoutLine: {'line': b'writing top-level names to ../../build/wheel_controller/wheel_controller.egg-info/top_level.txt\n'}
+[22.194115] (wheel_controller) StdoutLine: {'line': b"reading manifest file '../../build/wheel_controller/wheel_controller.egg-info/SOURCES.txt'\n"}
+[22.199284] (wheel_controller) StdoutLine: {'line': b"writing manifest file '../../build/wheel_controller/wheel_controller.egg-info/SOURCES.txt'\n"}
+[22.200007] (wheel_controller) StdoutLine: {'line': b'running build\n'}
+[22.200781] (wheel_controller) StdoutLine: {'line': b'running build_py\n'}
+[22.201925] (wheel_controller) StdoutLine: {'line': b'running install\n'}
+[22.203495] (wheel_controller) StdoutLine: {'line': b'running install_lib\n'}
+[22.210558] (wheel_controller) StdoutLine: {'line': b'running install_data\n'}
+[22.211433] (wheel_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[22.218717] (wheel_controller) StdoutLine: {'line': b"removing '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/python3.10/site-packages/wheel_controller-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[22.220445] (wheel_controller) StdoutLine: {'line': b'Copying ../../build/wheel_controller/wheel_controller.egg-info to /home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/python3.10/site-packages/wheel_controller-0.0.0-py3.10.egg-info\n'}
+[22.227820] (wheel_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[22.231091] (-) TimerEvent: {}
+[22.310680] (wheel_controller) StdoutLine: {'line': b'Installing wheel_controller script to /home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/wheel_controller\n'}
+[22.311644] (wheel_controller) StdoutLine: {'line': b"writing list of installed files to '/home/dora/dora_ros2_ws/robot_ws/build/wheel_controller/install.log'\n"}
+[22.331391] (-) TimerEvent: {}
+[22.432604] (-) TimerEvent: {}
+[22.444187] (wheel_controller) CommandEnded: {'returncode': 0}
+[22.479221] (wheel_controller) JobEnded: {'identifier': 'wheel_controller', 'rc': 0}
+[22.482961] (-) EventReactorShutdown: {}
