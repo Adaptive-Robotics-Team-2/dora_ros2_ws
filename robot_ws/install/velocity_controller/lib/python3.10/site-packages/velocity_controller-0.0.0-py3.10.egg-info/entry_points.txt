@@ -1,3 +1,0 @@
-[console_scripts]
-velocity_controller = velocity_controller.velocity_controller:main
-
