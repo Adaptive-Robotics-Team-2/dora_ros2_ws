@@ -1,3 +1,0 @@
-[console_scripts]
-mecanum_controller = mecanum_controller.mecanum_controller:main
-
