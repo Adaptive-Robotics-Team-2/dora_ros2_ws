@@ -1,3 +1,0 @@
-[console_scripts]
-encoder_to_odom = encoder_odometrytest.encoder_to_odom:main
-
