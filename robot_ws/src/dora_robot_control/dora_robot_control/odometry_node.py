@@ -34,13 +34,16 @@ class OdometryNode(Node):
             'processed_data',
             self.publish_odometry_callback,
             10)
-        self.subscription
+        
+        self.broadcast_static_tf()
+
 
     def publish_odometry_callback(self, msg: Float32MultiArray):
         encoder_data = msg.data
+        self.get_logger().info(f"msg data: {encoder_data}")
         
+
         x, y, th, vx, vy, vth = self.compute_holonomic_odometry(encoder_data)
-        # self.get_logger().info(f"Odometry: x={x}, y={y}, th={th}, vx={vx}, vy={vy}, vth={vth}")
         current_time = self.get_clock().now()
 
         odom = Odometry()
@@ -61,9 +64,7 @@ class OdometryNode(Node):
         odom.twist.twist.angular.z = vth
 
         self.odom_pub.publish(odom)
-
         self.broadcast_dynamic_tf(x, y, th)
-        self.broadcast_static_tf()
 
     def compute_holonomic_odometry(self, wheel_data):
         current_time = self.get_clock().now()
@@ -119,8 +120,6 @@ class OdometryNode(Node):
         self.tf_broadcaster.sendTransform(t)
         
     def broadcast_static_tf(self):
-        """
-        """
         static_transform_stamped = TransformStamped()
 
         static_transform_stamped.header.stamp = self.get_clock().now().to_msg()
@@ -133,7 +132,7 @@ class OdometryNode(Node):
         static_transform_stamped.transform.translation.z = 0.06
 
         # No rotation between base_link and laser
-        quat = quaternion_from_euler(0, 0, 0)
+        quat = quaternion_from_euler(0, 0, math.pi)
         static_transform_stamped.transform.rotation.x = quat[0]
         static_transform_stamped.transform.rotation.y = quat[1]
         static_transform_stamped.transform.rotation.z = quat[2]

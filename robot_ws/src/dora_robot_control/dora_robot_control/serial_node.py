@@ -17,7 +17,7 @@ class SerialNode(Node):
         self.callback_group = rclpy.callback_groups.MutuallyExclusiveCallbackGroup()
         
         # Timer for reading encoder feedback
-        self.timer = self.create_timer(0.1, self.encoder_callback, callback_group=self.callback_group)        
+        self.timer = self.create_timer(0.1, self.encoder_callback)        
         self.encoder_pub = self.create_publisher(Float32MultiArray, 'processed_data', 1, callback_group=self.callback_group)
         
         # Subscriber for wheel_vel
