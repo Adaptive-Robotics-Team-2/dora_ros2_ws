@@ -9,21 +9,18 @@ import math
 import serial
 import tf2_ros
 
+
 class WheelController(Node):
     def __init__(self):
         super().__init__('wheel_controller')
 
         # Parameters for wheel base and odometry
         self.wheel_radius = 0.08  # meters (radius of the wheels)
-        self.wheel_base_length = 0.28  # meters (length between front and rear wheels)
+        self.wheel_base_length = 0.153  # meters (length between front and rear wheels)
         self.wheel_base_width = 0.362  # meters (width between left and right wheels)
 
         # Serial communication settings
-        try:
-            self.serial_port = serial.Serial('/dev/ttyS0', 9600, timeout=1)
-        except serial.SerialException as e:
-            self.get_logger().error(f"Error opening serial port: {e}")
-            raise
+        self.serial_port = serial.Serial('/dev/ttyS0', 9600, timeout=1)
 
         # Variables to store position and orientation
         self.x = 0.0
@@ -44,7 +41,7 @@ class WheelController(Node):
         )
 
         # Timer for odometry updates
-        self.create_timer(0.01, self.update_odometry)  # 10 Hz
+        self.create_timer(0.1, self.update_odometry)  # 10 Hz
         self.broadcast_static_tf()
 
     def read_wheel_data(self):
@@ -74,14 +71,12 @@ class WheelController(Node):
         ]
         self.last_wheel_data = wheel_data
 
-        # Compute velocities (vx, vy, vth) for mecanum wheels
         vx = (delta_wheel[0] + delta_wheel[1] + delta_wheel[2] + delta_wheel[3]) / 4.0
         vy = (-delta_wheel[0] + delta_wheel[1] + delta_wheel[2] - delta_wheel[3]) / 4.0
         vth = (-delta_wheel[0] + delta_wheel[1] - delta_wheel[2] + delta_wheel[3]) / (
             4.0 * (self.wheel_base_length + self.wheel_base_width) / 2.0
         )
 
-        # Update position and orientation based on velocities
         delta_x = vx * delta_time
         delta_y = vy * delta_time
         delta_th = vth * delta_time
@@ -97,36 +92,34 @@ class WheelController(Node):
     def publish_odometry(self):
         """ Publish the odometry message and broadcast the TF """
         wheel_data = self.read_wheel_data()
-        if wheel_data is None:
-            return
+        if wheel_data is not None:
+            # Update odometry only if new data is received
+            x, y, th, vx, vy, vth = self.compute_holonomic_odometry(wheel_data)
 
-        x, y, th, vx, vy, vth = self.compute_holonomic_odometry(wheel_data)
-        current_time = self.get_clock().now()
+            # Create and populate the Odometry message
+            odom = Odometry()
+            odom.header.stamp = self.get_clock().now().to_msg()
+            odom.header.frame_id = 'odom'
+            odom.child_frame_id = 'base_footprint'
 
-        # Create and populate the Odometry message
-        odom = Odometry()
-        odom.header.stamp = current_time.to_msg()
-        odom.header.frame_id = 'odom'
-        odom.child_frame_id = 'base_footprint'
+            odom.pose.pose.position.x = self.x
+            odom.pose.pose.position.y = self.y
+            odom_quat = quaternion_from_euler(0, 0, self.th)
+            odom.pose.pose.orientation.x = odom_quat[0]
+            odom.pose.pose.orientation.y = odom_quat[1]
+            odom.pose.pose.orientation.z = odom_quat[2]
+            odom.pose.pose.orientation.w = odom_quat[3]
 
-        odom.pose.pose.position.x = x
-        odom.pose.pose.position.y = y
-        odom_quat = quaternion_from_euler(0, 0, th)
-        odom.pose.pose.orientation.x = odom_quat[0]
-        odom.pose.pose.orientation.y = odom_quat[1]
-        odom.pose.pose.orientation.z = odom_quat[2]
-        odom.pose.pose.orientation.w = odom_quat[3]
+            odom.twist.twist.linear.x = vx
+            odom.twist.twist.linear.y = vy
+            odom.twist.twist.angular.z = vth
 
-        odom.twist.twist.linear.x = vx
-        odom.twist.twist.linear.y = vy
-        odom.twist.twist.angular.z = vth
+            self.odom_pub.publish(odom)
 
-        self.odom_pub.publish(odom)
-
-        self.broadcast_dynamic_tf(x, y, th)
+            # Always broadcast the TF, even if wheel data is None
+        self.broadcast_dynamic_tf(self.x, self.y, self.th)
 
     def broadcast_dynamic_tf(self, x, y, th):
-        """ Broadcast the transform for the robot's movement """
         t = TransformStamped()
         t.header.stamp = self.get_clock().now().to_msg()
         t.header.frame_id = 'odom'
@@ -172,9 +165,11 @@ class WheelController(Node):
         v_rr = (1 / r) * (vx - vy + (L + W) * wz)
 
         return v_fl, v_fr, v_rl, v_rr
-    
+
     def broadcast_static_tf(self):
-        """ Broadcast a static transform between base_link and laser """
+        """
+        Broadcast a static transform between base_link and laser, where the laser is 6 cm above base_link.
+        """
         static_transform_stamped = TransformStamped()
 
         static_transform_stamped.header.stamp = self.get_clock().now().to_msg()
@@ -187,7 +182,7 @@ class WheelController(Node):
         static_transform_stamped.transform.translation.z = 0.06
 
         # No rotation between base_link and laser
-        quat = quaternion_from_euler(0, 0, math.pi)
+        quat = quaternion_from_euler(0, 0, 0)
         static_transform_stamped.transform.rotation.x = quat[0]
         static_transform_stamped.transform.rotation.y = quat[1]
         static_transform_stamped.transform.rotation.z = quat[2]
