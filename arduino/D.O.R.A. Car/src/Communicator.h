@@ -2,6 +2,7 @@
 #define COMUNICATOR_H
 
 #include <Arduino.h>
+#include "WheelVelocities.h"
 
 /**
  * @class Communicator
@@ -13,18 +14,6 @@
 class Communicator
 {
 public:
-    /**
-     * @struct WheelVelocities
-     * @brief Represents the velocities of all four wheels.
-     */
-    struct WheelVelocities
-    {
-        volatile long topLeft;    ///< Velocity of the top left wheel.
-        volatile long topRight;   ///< Velocity of the top right wheel.
-        volatile long bottomLeft; ///< Velocity of the bottom left wheel.
-        volatile long bottomRight;///< Velocity of the bottom right wheel.
-    };
-
     /**
      * @brief Constructs a Communicator object.
      */
@@ -59,13 +48,31 @@ public:
     WheelVelocities ReceiveValues();
 
 private:
+    const char startSendingCharacter = '{';
+    const char endSendingCharacter = '}';
+
+    const char startReceivingCharacter = '[';
+    const char endReceivingCharacter = ']';
+
     /**
-     * @brief Parses wheel velocities from a data string.
+     * @brief Parses a message to extract wheel velocities.
      *
      * @param data The data string to parse.
      * @return The parsed wheel velocities.
      */
-    WheelVelocities parseVelocitiesFromData(const char *data);
+    WheelVelocities parseMessage(const char *data);
+
+    /**
+     * @brief Calculates a simple checksum for a given data string.
+     *
+     * @param data The data string to calculate the checksum for.
+     * @return The calculated checksum.
+     */
+    int calculateChecksum(const String &data);
+
+    void clearSerialBuffers();
+
+    WheelVelocities wheelVelocities;
 };
 
 #endif // COMUNICATOR_H

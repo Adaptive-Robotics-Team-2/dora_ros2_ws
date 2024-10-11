@@ -51,16 +51,15 @@ void Car::PIDscompute()
     bottomRightWheel->GetPID()->Compute();
 }
 
-void Car::SetSetpoints(double topLeftWheelSetpoint, double topRightWheelSetpoint,
-                       double bottomLeftWheelSetpoint, double bottomRightWheelSetpoint)
+void Car::SetSetpoints(const WheelVelocities &wheelVelocities)
 {
-    topLeftWheel->SetSetpoint(topLeftWheelSetpoint);
-    topRightWheel->SetSetpoint(topRightWheelSetpoint);
-    bottomLeftWheel->SetSetpoint(bottomLeftWheelSetpoint);
-    bottomRightWheel->SetSetpoint(bottomRightWheelSetpoint);
+    topLeftWheel->SetSetpoint(wheelVelocities.topLeft);
+    topRightWheel->SetSetpoint(wheelVelocities.topRight);
+    bottomLeftWheel->SetSetpoint(wheelVelocities.bottomLeft);
+    bottomRightWheel->SetSetpoint(wheelVelocities.bottomRight);
 }
 
-Car::WheelVelocities Car::GetEncoders()
+WheelVelocities Car::GetEncoders()
 {
     WheelVelocities encoders;
     encoders.topLeft = topLeftWheel->GetEncoderPosition();
@@ -91,6 +90,7 @@ Wheel *Car::GetBottomRightWheel()
     return bottomRightWheel;
 }
 
+#pragma region CarMethodsToImplement
 // TODO: Method to drive the car forward
 void Car::ForwardDrive()
 {
@@ -115,6 +115,7 @@ void Car::TurnRight()
 void Car::Stop()
 {
 }
+#pragma endregion
 
 Car::~Car()
 {

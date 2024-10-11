@@ -217,7 +217,7 @@ void PIDControlTask(void *pvParameters)
     {
       String readLine = Serial.readStringUntil('\n');
       const char *data = readLine.c_str();
-      // Serial.println(data); // Echo back the received data for debugging
+      Serial.println("test"+ String(data)); // Echo back the received data for debugging
       parseWheelVelocities(data);
 
       // Read encoders and update PID control

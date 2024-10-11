@@ -17,14 +17,8 @@ def generate_launch_description():
         ),
         Node(
             package='dora_robot_control',
-            executable='wheel_vel_action_server',
-            name='wheel_vel_action_server',
+            executable='wheel_vel_node',
+            name='wheel_vel_node',
             # output='screen',
         ),
-        Node(
-            package='dora_robot_control',
-            executable='wheel_vel_action_client',
-            name='wheel_vel_action_client',
-            # output='screen',
-        )
     ])

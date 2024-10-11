@@ -10,7 +10,7 @@ sudo chmod 666 /dev/ttyUSB0
 
 # Build the workspace
 echo "Building workspace..."
-colcon build
+colcon build --packages-select dora_robot_control
 
 # Source the workspace
 echo "Sourcing workspace..."

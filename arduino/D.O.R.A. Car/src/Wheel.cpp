@@ -67,10 +67,20 @@ void Wheel::HandleEncoderChange()
     // Serial.println("Encoder A: " + String(interruptEncoderPinA));
     int b = digitalRead(confermationEncoderPinB);
 
-    // Update encoder position based on the state of the channels using ternary operator
-    encoderPosition += (a == b) ? 1 : -1;
-}
+    // Check if the pins match the specified conditions
+    bool reverseDirection = (interruptEncoderPinA == 2 || interruptEncoderPinA == 19) && 
+                            (confermationEncoderPinB == 53 || confermationEncoderPinB == 50);
 
+    // Update encoder position based on the state of the channels and the direction condition
+    if (reverseDirection)
+    {
+        encoderPosition += (a == b) ? -1 : 1;
+    }
+    else
+    {
+        encoderPosition += (a == b) ? 1 : -1;
+    }
+}
 void Wheel::SetServo()
 {
     int pwm = 0;

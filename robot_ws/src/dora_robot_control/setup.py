@@ -27,6 +27,8 @@ setup(
             'odometry_node = dora_robot_control.odometry_node:main',
             'wheel_vel_action_server = dora_robot_control.wheel_vel_action_server:main',
             'wheel_vel_action_client = dora_robot_control.wheel_vel_action_client:main',
+            'wheel_vel_node = dora_robot_control.wheel_vel_node:main',
+        
         ],
     },
 )

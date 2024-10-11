@@ -2,6 +2,7 @@
 #define CAR_H
 
 #include "Wheel.h"
+#include "WheelVelocities.h"
 
 /**
  * @class Car
@@ -34,17 +35,14 @@ public:
     void Drive();
 
     /**
-     * @brief Sets the setpoints for all four wheels.
+     * @brief Sets the setpoints for the wheel velocities.
      *
-     * @param topLeftWheelSetpoint The setpoint for the top left wheel.
-     * @param topRightWheelSetpoint The setpoint for the top right wheel.
-     * @param bottomLeftWheelSetpoint The setpoint for the bottom left wheel.
-     * @param bottomRightWheelSetpoint The setpoint for the bottom right wheel.
+     * This function updates the setpoints for the wheel velocities of the car.
+     *
+     * @param wheelVelocities A reference to a WheelVelocities object containing
+     *                        the desired velocities for each wheel.
      */
-    void SetSetpoints(double topLeftWheelSetpoint, double topRightWheelSetpoint,
-                      double bottomLeftWheelSetpoint, double bottomRightWheelSetpoint);
-
-
+    void SetSetpoints(const WheelVelocities &wheelVelocities);
 
     /**
      * @brief Gets the top left wheel.
@@ -73,18 +71,6 @@ public:
      * @return A pointer to the bottom right wheel.
      */
     Wheel *GetBottomRightWheel();
-
-    /**
-     * @struct WheelVelocities
-     * @brief Represents the velocities of all four wheels.
-     */
-    struct WheelVelocities
-    {
-        double topLeft;     ///< Velocity of the top left wheel.
-        double topRight;    ///< Velocity of the top right wheel.
-        double bottomLeft;  ///< Velocity of the bottom left wheel.
-        double bottomRight; ///< Velocity of the bottom right wheel.
-    };
 
     /**
      * @brief Gets the encoder values for all four wheels.
@@ -125,6 +111,7 @@ public:
      */
     void Stop();
 
+    // TODO
     /**
      * @enum CarState
      * @brief Represents the state of the car.
@@ -143,43 +130,43 @@ private:
     Wheel *topRightWheel;    ///< Pointer to the top right wheel.
     Wheel *bottomLeftWheel;  ///< Pointer to the bottom left wheel.
     Wheel *bottomRightWheel; ///< Pointer to the bottom right wheel.
+    WheelVelocities wheelVelocities;
 
-    static const int topLeftWheelSpeedControlPin = 6;          ///< Speed control pin for the top left wheel.
-    static const int topLeftWheelMoterPin1 = 26;               ///< Motor control pin 1 for the top left wheel.
-    static const int topLeftWheelMoterPin2 = 27;               ///< Motor control pin 2 for the top left wheel.
-    static const int topLeftWheelInterruptEncoderPinA = 19;    ///< Encoder pin A for the top left wheel.
-    static const int topLeftWheelConfermationEncoderPinB = 50; ///< Encoder pin B for the top left wheel.
-    static const double topLeftWheelKp = 1;                    ///< Proportional gain for the top left wheel's PID controller.
-    static const double topLeftWheelKi = 0;                    ///< Integral gain for the top left wheel's PID controller.
-    static const double topLeftWheelKd = 0;                    ///< Derivative gain for the top left wheel's PID controller.
+    static constexpr int topLeftWheelSpeedControlPin = 6;          ///< Speed control pin for the top left wheel.
+    static constexpr int topLeftWheelMoterPin1 = 26;               ///< Motor control pin 1 for the top left wheel.
+    static constexpr int topLeftWheelMoterPin2 = 27;               ///< Motor control pin 2 for the top left wheel.
+    static constexpr int topLeftWheelInterruptEncoderPinA = 19;    ///< Encoder pin A for the top left wheel.
+    static constexpr int topLeftWheelConfermationEncoderPinB = 50; ///< Encoder pin B for the top left wheel.
+    static constexpr double topLeftWheelKp = 1.0;                  ///< Proportional gain for the top left wheel's PID controller.
+    static constexpr double topLeftWheelKi = 0.0;                  ///< Integral gain for the top left wheel's PID controller.
+    static constexpr double topLeftWheelKd = 0.0;                  ///< Derivative gain for the top left wheel's PID controller.
 
-    static const int topRightWheelSpeedControlPin = 7;          ///< Speed control pin for the top right wheel.
-    static const int topRightWheelMoterPin1 = 28;               ///< Motor control pin 1 for the top right wheel.
-    static const int topRightWheelMoterPin2 = 29;               ///< Motor control pin 2 for the top right wheel.
-    static const int topRightWheelInterruptEncoderPinA = 18;    ///< Encoder pin A for the top right wheel.
-    static const int topRightWheelConfermationEncoderPinB = 51; ///< Encoder pin B for the top right wheel.
-    static const double topRightWheelKp = 1;                    ///< Proportional gain for the top right wheel's PID controller.
-    static const double topRightWheelKi = 0;                    ///< Integral gain for the top right wheel's PID controller.
-    static const double topRightWheelKd = 0;                    ///< Derivative gain for the top right wheel's PID controller.
+    static constexpr int topRightWheelSpeedControlPin = 7;          ///< Speed control pin for the top right wheel.
+    static constexpr int topRightWheelMoterPin1 = 28;               ///< Motor control pin 1 for the top right wheel.
+    static constexpr int topRightWheelMoterPin2 = 29;               ///< Motor control pin 2 for the top right wheel.
+    static constexpr int topRightWheelInterruptEncoderPinA = 18;    ///< Encoder pin A for the top right wheel.
+    static constexpr int topRightWheelConfermationEncoderPinB = 51; ///< Encoder pin B for the top right wheel.
+    static constexpr double topRightWheelKp = 1.0;                  ///< Proportional gain for the top right wheel's PID controller.
+    static constexpr double topRightWheelKi = 0.0;                  ///< Integral gain for the top right wheel's PID controller.
+    static constexpr double topRightWheelKd = 0.0;                  ///< Derivative gain for the top right wheel's PID controller.
 
-    static const int bottomLeftWheelSpeedControlPin = 4;          ///< Speed control pin for the bottom left wheel.
-    static const int bottomLeftWheelMoterPin1 = 22;               ///< Motor control pin 1 for the bottom left wheel.
-    static const int bottomLeftWheelMoterPin2 = 23;               ///< Motor control pin 2 for the bottom left wheel.
-    static const int bottomLeftWheelInterruptEncoderPinA = 2;     ///< Encoder pin A for the bottom left wheel.
-    static const int bottomLeftWheelConfermationEncoderPinB = 53; ///< Encoder pin B for the bottom left wheel.
-    static const double bottomLeftWheelKp = 1;                    ///< Proportional gain for the bottom left wheel's PID controller.
-    static const double bottomLeftWheelKi = 0;                    ///< Integral gain for the bottom left wheel's PID controller.
-    static const double bottomLeftWheelKd = 0;                    ///< Derivative gain for the bottom left wheel's PID controller.
+    static constexpr int bottomLeftWheelSpeedControlPin = 4;          ///< Speed control pin for the bottom left wheel.
+    static constexpr int bottomLeftWheelMoterPin1 = 22;               ///< Motor control pin 1 for the bottom left wheel.
+    static constexpr int bottomLeftWheelMoterPin2 = 23;               ///< Motor control pin 2 for the bottom left wheel.
+    static constexpr int bottomLeftWheelInterruptEncoderPinA = 2;     ///< Encoder pin A for the bottom left wheel.
+    static constexpr int bottomLeftWheelConfermationEncoderPinB = 53; ///< Encoder pin B for the bottom left wheel.
+    static constexpr double bottomLeftWheelKp = 1.0;                  ///< Proportional gain for the bottom left wheel's PID controller.
+    static constexpr double bottomLeftWheelKi = 0.0;                  ///< Integral gain for the bottom left wheel's PID controller.
+    static constexpr double bottomLeftWheelKd = 0.0;                  ///< Derivative gain for the bottom left wheel's PID controller.
 
-    static const int bottomRightWheelSpeedControlPin = 5;          ///< Speed control pin for the bottom right wheel.
-    static const int bottomRightWheelMoterPin1 = 24;               ///< Motor control pin 1 for the bottom right wheel.
-    static const int bottomRightWheelMoterPin2 = 25;               ///< Motor control pin 2 for the bottom right wheel.
-    static const int bottomRightWheelInterruptEncoderPinA = 3;     ///< Encoder pin A for the bottom right wheel.
-    static const int bottomRightWheelConfermationEncoderPinB = 52; ///< Encoder pin B for the bottom right wheel.
-    static const double bottomRightWheelKp = 1;                    ///< Proportional gain for the bottom right wheel's PID controller.
-    static const double bottomRightWheelKi = 0;                    ///< Integral gain for the bottom right wheel's PID controller.
-    static const double bottomRightWheelKd = 0;                    ///< Derivative gain for the bottom right wheel's PID controller.
-
+    static constexpr int bottomRightWheelSpeedControlPin = 5;          ///< Speed control pin for the bottom right wheel.
+    static constexpr int bottomRightWheelMoterPin1 = 24;               ///< Motor control pin 1 for the bottom right wheel.
+    static constexpr int bottomRightWheelMoterPin2 = 25;               ///< Motor control pin 2 for the bottom right wheel.
+    static constexpr int bottomRightWheelInterruptEncoderPinA = 3;     ///< Encoder pin A for the bottom right wheel.
+    static constexpr int bottomRightWheelConfermationEncoderPinB = 52; ///< Encoder pin B for the bottom right wheel.
+    static constexpr double bottomRightWheelKp = 1.0;                  ///< Proportional gain for the bottom right wheel's PID controller.
+    static constexpr double bottomRightWheelKi = 0.0;                  ///< Integral gain for the bottom right wheel's PID controller.
+    static constexpr double bottomRightWheelKd = 0.0;                  ///< Derivative gain for the bottom right wheel's PID controller.
     /**
      * @brief Calculates the current speed of the car.
      */

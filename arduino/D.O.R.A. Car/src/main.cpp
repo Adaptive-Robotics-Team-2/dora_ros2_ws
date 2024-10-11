@@ -1,7 +1,8 @@
 #include "Car.h"
 #include "Communicator.h"
+#include "WheelVelocities.h"
+
 #include <TaskScheduler.h>
-// #include "Wheel.h"
 #define BAUDRATE 9600
 
 Communicator *doraComunicator;
@@ -53,7 +54,7 @@ void bottomRightWheelISR()
 // PID Control Task
 void PIDControlTask()
 {
-    Communicator::WheelVelocities wheelVelocities;
+    WheelVelocities wheelVelocities;
 
     wheelVelocities.topLeft = 0;
     wheelVelocities.topRight = 0;
@@ -65,23 +66,16 @@ void PIDControlTask()
     // Serial.println("TL: " + String(wheelVelocities.topLeft) + ", TR: " + String(wheelVelocities.topRight) + ", BL: " + String(wheelVelocities.bottomLeft) + ", BR: " + String(wheelVelocities.bottomRight));
     // Serial.println(String(wheelVelocities.topLeft) + "wddfxdsd," + String(wheelVelocities.topRight) + "," + String(wheelVelocities.bottomLeft) + "," + String(wheelVelocities.bottomRight));
 
-    doraCar->SetSetpoints(wheelVelocities.topLeft, wheelVelocities.topRight,
-                          wheelVelocities.bottomLeft, wheelVelocities.bottomRight);
+    doraCar->SetSetpoints(wheelVelocities);
     doraCar->Drive();
 }
 
 // Serial Communication Task
 void SerialTask()
 {
-    Car::WheelVelocities encoderData = doraCar->GetEncoders();
-    Communicator::WheelVelocities sendEncoderData;
+    WheelVelocities encoderData = doraCar->GetEncoders();
 
-    sendEncoderData.topLeft = encoderData.topLeft;
-    sendEncoderData.topRight = encoderData.topRight;
-    sendEncoderData.bottomLeft = encoderData.bottomLeft;
-    sendEncoderData.bottomRight = encoderData.bottomRight;
-
-    doraComunicator->SendEncoderData(sendEncoderData);
+    doraComunicator->SendEncoderData(encoderData);
 }
 
 void setup()
