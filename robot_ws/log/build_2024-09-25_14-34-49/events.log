@@ -1,6 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.001258] (-) JobUnselected: {'identifier': 'my_package'}
-[0.001386] (-) JobUnselected: {'identifier': 'serial_coms'}
-[0.001466] (-) JobUnselected: {'identifier': 'velocity_controller'}
-[0.001541] (-) JobUnselected: {'identifier': 'wheel_controller'}
-[0.002384] (-) EventReactorShutdown: {}
