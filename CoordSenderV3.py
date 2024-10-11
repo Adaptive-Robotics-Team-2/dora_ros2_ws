@@ -13,9 +13,10 @@ class WaypointNavigator(Node):
         # Create an action client to send the waypoints to Nav2
         self._navigate_action_client = ActionClient(self, NavigateToPose, 'navigate_to_pose')
 
+    
     def send_waypoints(self, waypoints):
         """
-        Send a list of waypoints to the Nav2 stack.
+        Send a list of waypoints to the Nav2 stack, one by one, waiting for the result of each before sending the next.
         """
         for waypoint in waypoints:
             goal_msg = NavigateToPose.Goal()
@@ -26,8 +27,8 @@ class WaypointNavigator(Node):
             # Wait for the action server to be available
             self._navigate_action_client.wait_for_server()
             
-            # Send the goal
-            self._send_goal(goal_msg)
+            # Send the goal and wait for it to complete
+            self._send_goal_and_wait(goal_msg)
     
     def read_csv(self, file_path):
         """
@@ -60,12 +61,28 @@ class WaypointNavigator(Node):
         
         return pose_stamped
 
-    def _send_goal(self, goal_msg):
+    def _send_goal_and_wait(self, goal_msg):
         """
-        Internal method to send the goal and wait for result.
+        Send a goal to the action server and wait for the result before proceeding to the next goal.
         """
         send_goal_future = self._navigate_action_client.send_goal_async(goal_msg)
         send_goal_future.add_done_callback(self.goal_response_callback)
+
+        # Wait for the navigation goal to complete
+        rclpy.spin_until_future_complete(self, send_goal_future)
+        goal_handle = send_goal_future.result()
+
+        if goal_handle and goal_handle.accepted:
+            result_future = goal_handle.get_result_async()
+            rclpy.spin_until_future_complete(self, result_future)
+            result = result_future.result()
+
+            if result:
+                self.get_logger().info(f'Navigation to goal {goal_msg.pose} completed successfully.')
+            else:
+                self.get_logger().info(f'Navigation to goal {goal_msg.pose} failed.')
+        else:
+            self.get_logger().info('Goal was rejected.')
 
     def goal_response_callback(self, future):
         """
@@ -75,22 +92,8 @@ class WaypointNavigator(Node):
 
         if not goal_handle.accepted:
             self.get_logger().info('Goal was rejected.')
-            return
-
-        self.get_logger().info('Goal accepted.')
-        result_future = goal_handle.get_result_async()
-        result_future.add_done_callback(self.get_result_callback)
-
-    def get_result_callback(self, future):
-        """
-        Process the result after navigation is complete.
-        """
-        result = future.result().result
-        if result:
-            self.get_logger().info(f'Navigation to goal completed successfully.')
         else:
-            self.get_logger().info(f'Navigation to goal failed.')
-
+            self.get_logger().info('Goal accepted.')
 
 def main(args=None):
     rclpy.init(args=args)
