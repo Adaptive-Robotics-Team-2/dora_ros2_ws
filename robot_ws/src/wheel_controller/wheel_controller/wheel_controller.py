@@ -166,7 +166,7 @@ class WheelController(Node):
         v_fl, v_fr, v_rl, v_rr = int(v_fl), int(v_fr), int(v_rl), int(v_rr)
 
         data = bytearray([v_fl, v_fr, v_rl, v_rr]) # Convert to bytes
-        header = 0x00 # Header byte for wheel velocities (0x00)
+        header = 0x01 # Header byte for wheel velocities (0x00)
 
         checksum = sum(data) & 0xFF # Checksum byte
         payload = bytearray([header]) + data + bytearray([checksum]) # Concatenate header, data, and checksum
