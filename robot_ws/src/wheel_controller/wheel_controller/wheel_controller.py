@@ -158,7 +158,21 @@ class WheelController(Node):
         v_fl, v_fr, v_rl, v_rr = self.compute_wheel_velocities(vx, vy, wz)
 
         self.get_logger().info(f'FL: {v_fl:.2f}, FR: {v_fr:.2f}, RL: {v_rl:.2f}, RR: {v_rr:.2f} (rad/s)')
-        self.serial_port.write(f'{v_fl:.2f},{v_fr:.2f},{v_rl:.2f},{v_rr:.2f}\n'.encode())
+        payload = self.createPayload(v_fl, v_fr, v_rl, v_rr)
+        self.serial_port.write(payload)
+
+    def createPayload(self, v_fl, v_fr, v_rl, v_rr):
+
+        v_fl, v_fr, v_rl, v_rr = int(v_fl), int(v_fr), int(v_rl), int(v_rr)
+
+        data = bytearray([v_fl, v_fr, v_rl, v_rr]) # Convert to bytes
+        header = 0x00 # Header byte for wheel velocities (0x00)
+
+        checksum = sum(data) & 0xFF # Checksum byte
+        payload = bytearray([header]) + data + bytearray([checksum]) # Concatenate header, data, and checksum
+        self.get_logger().info(f'Payload: {payload}')
+
+        return payload
 
     def compute_wheel_velocities(self, vx, vy, wz):
         """ Compute the individual wheel velocities for a mecanum drive """
