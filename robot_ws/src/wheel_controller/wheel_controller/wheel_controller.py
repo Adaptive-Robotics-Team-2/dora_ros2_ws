@@ -162,17 +162,29 @@ class WheelController(Node):
         self.serial_port.write(payload)
 
     def createPayload(self, v_fl, v_fr, v_rl, v_rr):
+        # Convert velocities to signed 16-bit (two bytes)
+        def to_signed_16bit(value):
+            # Convert value to signed 16-bit, with 'big' endian (MSB first)
+            return value.to_bytes(2, byteorder='big', signed=True)
 
-        v_fl, v_fr, v_rl, v_rr = int(v_fl), int(v_fr), int(v_rl), int(v_rr)
+        # Convert all velocities to 2 bytes
+        v_fl_bytes = to_signed_16bit(int(v_fl))
+        v_fr_bytes = to_signed_16bit(int(v_fr))
+        v_rl_bytes = to_signed_16bit(int(v_rl))
+        v_rr_bytes = to_signed_16bit(int(v_rr))
 
-        data = bytearray([v_fl, v_fr, v_rl, v_rr]) # Convert to bytes
-        header = 0x01 # Header byte for wheel velocities (0x00)
+        # Concatenate all the data bytes
+        data = v_fl_bytes + v_fr_bytes + v_rl_bytes + v_rr_bytes
 
-        checksum = sum(data) & 0xFF # Checksum byte
-        payload = bytearray([header]) + data + bytearray([checksum]) # Concatenate header, data, and checksum
+        header = 0x00  # Header byte for wheel velocities (0x00)
+
+        checksum = sum(data) & 0xFF  # Checksum byte (sum modulo 256)
+        payload = bytearray([header]) + data + bytearray([checksum])  # Concatenate header, data, and checksum
+        
         self.get_logger().info(f'Payload: {payload}')
 
         return payload
+
 
     def compute_wheel_velocities(self, vx, vy, wz):
         """ Compute the individual wheel velocities for a mecanum drive """
