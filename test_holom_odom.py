@@ -54,9 +54,9 @@ def simulate_robot_motion():
     v = 1.0  # You can adjust this velocity value as needed
 
     # Set wheel velocities for in-place rotation (counterclockwise)
-    v1 = v  # Front-left wheel
+    v1 = -v  # Front-left wheel
     v2 = v   # Front-right wheel
-    v3 = v  # Back-left wheel
+    v3 = -v  # Back-left wheel
     v4 = v   # Back-right wheel
 
     # Simulate for 10 seconds (100 updates)
