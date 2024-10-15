@@ -6,8 +6,8 @@ from nav_msgs.msg import Odometry
 from geometry_msgs.msg import TransformStamped, Quaternion, Twist
 from tf_transformations import quaternion_from_euler
 import math
-import serial
 import tf2_ros
+import serial
 
 class WheelController(Node):
     def __init__(self):
@@ -44,7 +44,11 @@ class WheelController(Node):
         )
 
         # Timer for odometry updates
-        self.create_timer(0.01, self.update_odometry)  # 10 Hz
+        self.create_timer(0.01, self.update_odometry)  # 100 Hz
+            #updates more than wheel data is recieved - might cause error
+            #potential fix is :if wheel_data is None:
+            #return  # Skip odometry update if no data is available
+
         self.broadcast_static_tf()
 
     def read_wheel_data(self):
@@ -74,11 +78,11 @@ class WheelController(Node):
         ]
         self.last_wheel_data = wheel_data
 
-        # Compute velocities (vx, vy, vth) for mecanum wheels
+        # Compute velocities (vx, vy, vth) for mecanum wheelsquad
         vx = (delta_wheel[0] + delta_wheel[1] + delta_wheel[2] + delta_wheel[3]) / 4.0
         vy = (-delta_wheel[0] + delta_wheel[1] + delta_wheel[2] - delta_wheel[3]) / 4.0
         vth = (-delta_wheel[0] + delta_wheel[1] - delta_wheel[2] + delta_wheel[3]) / (
-            4.0 * (self.wheel_base_length + self.wheel_base_width) / 2.0
+            4.0 * (self.wheel_base_length + self.wheel_base_width)
         )
 
         # Update position and orientation based on velocities
@@ -89,6 +93,7 @@ class WheelController(Node):
         self.x += delta_x * math.cos(self.th) - delta_y * math.sin(self.th)
         self.y += delta_x * math.sin(self.th) + delta_y * math.cos(self.th)
         self.th += delta_th
+        self.th = (self.th + math.pi) % (2 * math.pi) - math.pi  # Keep th within [-pi, pi]
 
         self.last_time = current_time
 
@@ -170,7 +175,7 @@ class WheelController(Node):
         v_fr = (1 / r) * (vx + vy + (L + W) * wz)
         v_rl = (1 / r) * (vx + vy - (L + W) * wz)
         v_rr = (1 / r) * (vx - vy + (L + W) * wz)
-
+        
         return v_fl, v_fr, v_rl, v_rr
     
     def broadcast_static_tf(self):
