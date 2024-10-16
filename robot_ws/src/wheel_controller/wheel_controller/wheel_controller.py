@@ -14,9 +14,9 @@ class WheelController(Node):
         super().__init__('wheel_controller')
 
         # Parameters for wheel base and odometry
-        self.wheel_radius = 0.08  # meters (radius of the wheels)
-        self.wheel_base_length = 0.28  # meters (length between front and rear wheels)
-        self.wheel_base_width = 0.362  # meters (width between left and right wheels)
+        self.R = 0.04  # meters (radius of the wheels)
+        self.L = 0.112  # meters (length between front and rear wheels)
+        self.W = 0.16 # meters (width between left and right wheels)
 
         # Serial communication settings
         try:
@@ -30,6 +30,9 @@ class WheelController(Node):
         self.y = 0.0
         self.th = 0.0
         self.last_wheel_data = [0, 0, 0, 0]  # For four wheels
+        self.dt = 0.1 # seconds (time interval for the encoder ticks)
+        self.TICKS_PER_REV = 1440  # Number of encoder ticks per revolution
+    
         self.last_time = self.get_clock().now()
 
         # Publishers and Subscribers
@@ -57,47 +60,38 @@ class WheelController(Node):
             if self.serial_port.in_waiting > 0:
                 line = self.serial_port.readline().decode('utf-8').strip()
                 self.get_logger().info(f"Raw serial data: {line}")
-                wheel_data = [float(x) for x in line.split(',')]
-                return wheel_data
+                delta_ticks = [int(x) for x in line.split(',')]
+                return delta_ticks
             else:
                 return None
         except Exception as e:
             self.get_logger().error(f"Error reading serial data: {e}")
             return None
 
-    def compute_holonomic_odometry(self, wheel_data):
+    def compute_holonomic_odometry(self, delta_ticks):
         """ Compute the robot's odometry based on wheel encoder data """
-        current_time = self.get_clock().now()
-        delta_time = (current_time - self.last_time).nanoseconds / 1e9  # seconds
+        def calculate_velocities(delta_ticks):
+            # Convert tick to angular velocities (rad/s)
+            omega = [2 * math.pi * (ticks / self.TICKS_PER_REV) / self.dt for ticks in delta_ticks]
 
-        ticks_per_revolution = 1440
-        distance_per_tick = (2 * math.pi * self.wheel_radius) / ticks_per_revolution
+            # Compute the linear velocities (m/s)
+            vx = (self.wheel_radius / 4) * (omega[0] + omega[1] + omega[2] + omega[3])
+            vy = (self.wheel_radius / 4) * (-omega[0] + omega[1] - omega[2] + omega[3])
+            vz = (self.wheel_radius / (4 * (self.L + self.W))) * (-omega[0] + omega[1] + omega[2] - omega[3])
 
-        delta_wheel = [
-            (wheel_data[i] - self.last_wheel_data[i]) * distance_per_tick for i in range(4)
-        ]
-        self.last_wheel_data = wheel_data
+            return vx, vy, vz
 
-        # Compute velocities (vx, vy, vth) for mecanum wheelsquad
-        vx = (delta_wheel[0] + delta_wheel[1] + delta_wheel[2] + delta_wheel[3]) / 4.0
-        vy = (-delta_wheel[0] + delta_wheel[1] + delta_wheel[2] - delta_wheel[3]) / 4.0
-        vth = (-delta_wheel[0] + delta_wheel[1] - delta_wheel[2] + delta_wheel[3]) / (
-            4.0 * (self.wheel_base_length + self.wheel_base_width)
-        )
+        # Compute the robot's pose using the kinematic model
+        vx, vy, vz = calculate_velocities(delta_ticks)
 
-        # Update position and orientation based on velocities
-        delta_x = vx * delta_time
-        delta_y = vy * delta_time
-        delta_th = vth * delta_time
+        # Compute the change in position and orientation
+        self.x += (vx * self.dt * math.cos(self.th)) - (vy * self.dt * math.sin(self.th))
+        self.y += (vx * self.dt * math.sin(self.th)) + (vy * self.dt * math.cos(self.th))
+        self.theta += vz * self.dt
 
-        self.x += delta_x * math.cos(self.th) - delta_y * math.sin(self.th)
-        self.y += delta_x * math.sin(self.th) + delta_y * math.cos(self.th)
-        self.th += delta_th
-        self.th = (self.th + math.pi) % (2 * math.pi) - math.pi  # Keep th within [-pi, pi]
+        self.get_logger().info(f'x: {self.x:.2f}, y: {self.y:.2f}, th: {self.th:.2f} (rad)')
 
-        self.last_time = current_time
-
-        return self.x, self.y, self.th, vx, vy, vth
+        return self.x, self.y, self.th, vx, vy, vz
 
     def publish_odometry(self):
         """ Publish the odometry message and broadcast the TF """
