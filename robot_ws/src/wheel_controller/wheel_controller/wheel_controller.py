@@ -15,8 +15,8 @@ class WheelController(Node):
 
         # Parameters for wheel base and odometry
         self.R = 0.04  # meters (radius of the wheels)
-        self.L = 0.112  # meters (length between front and rear wheels)
-        self.W = 0.16 # meters (width between left and right wheels)
+        self.L = 0.215  # meters (length between front and rear wheels)
+        self.W = 0.325 # meters (width between left and right wheels)
 
         # Serial communication settings
         try:
@@ -29,7 +29,7 @@ class WheelController(Node):
         self.x = 0.0
         self.y = 0.0
         self.th = 0.0
-        self.dt = 0.1 # seconds (time interval for the encoder ticks)
+        self.dt = 0.01 # seconds (time interval for the encoder ticks)
         self.TICKS_PER_REV = 1440  # Number of encoder ticks per revolution
     
         # Publishers and Subscribers
@@ -40,7 +40,7 @@ class WheelController(Node):
             Twist,
             'cmd_vel',
             self.cmd_vel_callback,
-            10
+            1
         )
 
         # Timer for odometry updates
@@ -57,8 +57,12 @@ class WheelController(Node):
             if self.serial_port.in_waiting > 0:
                 line = self.serial_port.readline().decode('utf-8').strip()
                 self.get_logger().info(f"Raw serial data: {line}")
+                # make sure serial data is in the correct format {int,int,int,int}
+
                 delta_ticks = [int(x) for x in line.split(',')]
-                return delta_ticks
+                # size of delta_ticks is 4
+                if len(delta_ticks) == 4:
+                    return delta_ticks
             else:
                 return None
         except Exception as e:
@@ -73,8 +77,8 @@ class WheelController(Node):
 
             # Compute the linear velocities (m/s)
             vx = (self.R / 4) * (omega[0] + omega[1] + omega[2] + omega[3])
-            vy = (self.R / 4) * (-omega[0] + omega[1] - omega[2] + omega[3])
-            vz = (self.R / (4 * (self.L + self.W))) * (-omega[0] + omega[1] + omega[2] - omega[3])
+            vy = (self.R / 4) * (-omega[0] + omega[1] + omega[2] - omega[3])
+            vz = (self.R / (4 * (self.L + self.W))) * (-omega[0] + omega[1] - omega[2] + omega[3])
 
             return vx, vy, vz
 
@@ -117,9 +121,9 @@ class WheelController(Node):
         odom.twist.twist.linear.y = vy
         odom.twist.twist.angular.z = vth
 
+        self.broadcast_dynamic_tf(x, y, th)
         self.odom_pub.publish(odom)
 
-        self.broadcast_dynamic_tf(x, y, th)
 
     def broadcast_dynamic_tf(self, x, y, th):
         """ Broadcast the transform for the robot's movement """
@@ -158,15 +162,16 @@ class WheelController(Node):
 
     def compute_wheel_velocities(self, vx, vy, wz):
         """ Compute the individual wheel velocities for a mecanum drive """
-        L = self.L
-        W = self.W
-        r = self.R
+        L = self.L  # Distance between wheels along the robot's length
+        W = self.W  # Distance between wheels along the robot's width
+        r = self.R  # Radius of the wheels
 
-        v_fl = (1 / r) * (vx - vy - (L + W) * wz)
-        v_fr = (1 / r) * (vx + vy + (L + W) * wz)
-        v_rl = (1 / r) * (vx + vy - (L + W) * wz)
-        v_rr = (1 / r) * (vx - vy + (L + W) * wz)
-        
+        # Calculate the wheel velocities for a mecanum drive
+        v_fl = (1 / r) * (vx - vy - (L + W) * wz)  # Front-left wheel
+        v_fr = (1 / r) * (vx + vy + (L + W) * wz)  # Front-right wheel
+        v_rl = (1 / r) * (vx + vy - (L + W) * wz)  # Rear-left wheel
+        v_rr = (1 / r) * (vx - vy + (L + W) * wz)  # Rear-right wheel
+
         return v_fl, v_fr, v_rl, v_rr
     
     def broadcast_static_tf(self):
