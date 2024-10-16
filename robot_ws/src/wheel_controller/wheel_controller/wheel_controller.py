@@ -29,12 +29,9 @@ class WheelController(Node):
         self.x = 0.0
         self.y = 0.0
         self.th = 0.0
-        self.last_wheel_data = [0, 0, 0, 0]  # For four wheels
         self.dt = 0.1 # seconds (time interval for the encoder ticks)
         self.TICKS_PER_REV = 1440  # Number of encoder ticks per revolution
     
-        self.last_time = self.get_clock().now()
-
         # Publishers and Subscribers
         self.odom_pub = self.create_publisher(Odometry, 'odom', 50)
         self.tf_broadcaster = tf2_ros.TransformBroadcaster(self)
@@ -75,9 +72,9 @@ class WheelController(Node):
             omega = [2 * math.pi * (ticks / self.TICKS_PER_REV) / self.dt for ticks in delta_ticks]
 
             # Compute the linear velocities (m/s)
-            vx = (self.wheel_radius / 4) * (omega[0] + omega[1] + omega[2] + omega[3])
-            vy = (self.wheel_radius / 4) * (-omega[0] + omega[1] - omega[2] + omega[3])
-            vz = (self.wheel_radius / (4 * (self.L + self.W))) * (-omega[0] + omega[1] + omega[2] - omega[3])
+            vx = (self.R / 4) * (omega[0] + omega[1] + omega[2] + omega[3])
+            vy = (self.R / 4) * (-omega[0] + omega[1] - omega[2] + omega[3])
+            vz = (self.R / (4 * (self.L + self.W))) * (-omega[0] + omega[1] + omega[2] - omega[3])
 
             return vx, vy, vz
 
@@ -87,7 +84,7 @@ class WheelController(Node):
         # Compute the change in position and orientation
         self.x += (vx * self.dt * math.cos(self.th)) - (vy * self.dt * math.sin(self.th))
         self.y += (vx * self.dt * math.sin(self.th)) + (vy * self.dt * math.cos(self.th))
-        self.theta += vz * self.dt
+        self.th += vz * self.dt
 
         self.get_logger().info(f'x: {self.x:.2f}, y: {self.y:.2f}, th: {self.th:.2f} (rad)')
 
@@ -95,11 +92,11 @@ class WheelController(Node):
 
     def publish_odometry(self):
         """ Publish the odometry message and broadcast the TF """
-        wheel_data = self.read_wheel_data()
-        if wheel_data is None:
+        delta_ticks = self.read_wheel_data()
+        if delta_ticks is None:
             return
 
-        x, y, th, vx, vy, vth = self.compute_holonomic_odometry(wheel_data)
+        x, y, th, vx, vy, vth = self.compute_holonomic_odometry(delta_ticks)
         current_time = self.get_clock().now()
 
         # Create and populate the Odometry message
@@ -161,9 +158,9 @@ class WheelController(Node):
 
     def compute_wheel_velocities(self, vx, vy, wz):
         """ Compute the individual wheel velocities for a mecanum drive """
-        L = self.wheel_base_length
-        W = self.wheel_base_width
-        r = self.wheel_radius
+        L = self.L
+        W = self.W
+        r = self.R
 
         v_fl = (1 / r) * (vx - vy - (L + W) * wz)
         v_fr = (1 / r) * (vx + vy + (L + W) * wz)
