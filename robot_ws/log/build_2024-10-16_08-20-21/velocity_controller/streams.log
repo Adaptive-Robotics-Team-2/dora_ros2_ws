@@ -1,0 +1,21 @@
+[4.831s] Invoking command in '/home/dora/dora_ros2_ws/robot_ws/src/velocity_controller': PYTHONPATH=/home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/velocity_controller build --build-base /home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/build install --record /home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/install.log --single-version-externally-managed install_data
+[6.144s] running egg_info
+[6.148s] writing ../../build/velocity_controller/velocity_controller.egg-info/PKG-INFO
+[6.152s] writing dependency_links to ../../build/velocity_controller/velocity_controller.egg-info/dependency_links.txt
+[6.154s] writing entry points to ../../build/velocity_controller/velocity_controller.egg-info/entry_points.txt
+[6.154s] writing requirements to ../../build/velocity_controller/velocity_controller.egg-info/requires.txt
+[6.158s] writing top-level names to ../../build/velocity_controller/velocity_controller.egg-info/top_level.txt
+[6.163s] reading manifest file '../../build/velocity_controller/velocity_controller.egg-info/SOURCES.txt'
+[6.169s] writing manifest file '../../build/velocity_controller/velocity_controller.egg-info/SOURCES.txt'
+[6.171s] running build
+[6.171s] running build_py
+[6.174s] running install
+[6.176s] running install_lib
+[6.180s] running install_data
+[6.182s] running install_egg_info
+[6.191s] removing '/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages/velocity_controller-0.0.0-py3.10.egg-info' (and everything under it)
+[6.199s] Copying ../../build/velocity_controller/velocity_controller.egg-info to /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages/velocity_controller-0.0.0-py3.10.egg-info
+[6.202s] running install_scripts
+[6.288s] Installing velocity_controller script to /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/velocity_controller
+[6.291s] writing list of installed files to '/home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/install.log'
+[6.509s] Invoked command in '/home/dora/dora_ros2_ws/robot_ws/src/velocity_controller' returned '0': PYTHONPATH=/home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/velocity_controller build --build-base /home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/build install --record /home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/install.log --single-version-externally-managed install_data

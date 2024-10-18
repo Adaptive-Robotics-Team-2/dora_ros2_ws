@@ -1,0 +1,171 @@
+[0.443s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'wheel_controller']
+[0.443s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['wheel_controller'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff930bb430>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff931ef790>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff931ef790>>)
+[1.185s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.185s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.185s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.186s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.186s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.186s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.186s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/dora/dora_ros2_ws/robot_ws'
+[1.187s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.187s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.187s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.237s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.237s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.239s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.239s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.240s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.241s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.241s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.241s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.242s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.242s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.242s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.242s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.243s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.243s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.243s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.243s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.243s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.244s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometry) by extensions ['ignore', 'ignore_ament_install']
+[1.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometry) by extension 'ignore'
+[1.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometry) by extension 'ignore_ament_install'
+[1.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometry) by extensions ['colcon_pkg']
+[1.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometry) by extension 'colcon_pkg'
+[1.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometry) by extensions ['colcon_meta']
+[1.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometry) by extension 'colcon_meta'
+[1.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometry) by extensions ['ros']
+[1.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometry) by extension 'ros'
+[1.256s] DEBUG:colcon.colcon_core.package_identification:Package 'src/encoder_odometry' with type 'ros.ament_python' and name 'encoder_odometry'
+[1.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometrytest) by extensions ['ignore', 'ignore_ament_install']
+[1.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometrytest) by extension 'ignore'
+[1.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometrytest) by extension 'ignore_ament_install'
+[1.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometrytest) by extensions ['colcon_pkg']
+[1.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometrytest) by extension 'colcon_pkg'
+[1.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometrytest) by extensions ['colcon_meta']
+[1.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometrytest) by extension 'colcon_meta'
+[1.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometrytest) by extensions ['ros']
+[1.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/encoder_odometrytest) by extension 'ros'
+[1.263s] DEBUG:colcon.colcon_core.package_identification:Package 'src/encoder_odometrytest' with type 'ros.ament_python' and name 'encoder_odometrytest'
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['ignore', 'ignore_ament_install']
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ignore'
+[1.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ignore_ament_install'
+[1.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['colcon_pkg']
+[1.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'colcon_pkg'
+[1.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['colcon_meta']
+[1.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'colcon_meta'
+[1.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['ros']
+[1.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ros'
+[1.268s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rplidar_ros' with type 'ros.ament_cmake' and name 'rplidar_ros'
+[1.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_coms) by extensions ['ignore', 'ignore_ament_install']
+[1.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_coms) by extension 'ignore'
+[1.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_coms) by extension 'ignore_ament_install'
+[1.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_coms) by extensions ['colcon_pkg']
+[1.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_coms) by extension 'colcon_pkg'
+[1.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_coms) by extensions ['colcon_meta']
+[1.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_coms) by extension 'colcon_meta'
+[1.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_coms) by extensions ['ros']
+[1.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_coms) by extension 'ros'
+[1.273s] DEBUG:colcon.colcon_core.package_identification:Package 'src/serial_coms' with type 'ros.ament_python' and name 'serial_coms'
+[1.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/velocity_controller) by extensions ['ignore', 'ignore_ament_install']
+[1.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/velocity_controller) by extension 'ignore'
+[1.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/velocity_controller) by extension 'ignore_ament_install'
+[1.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/velocity_controller) by extensions ['colcon_pkg']
+[1.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/velocity_controller) by extension 'colcon_pkg'
+[1.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/velocity_controller) by extensions ['colcon_meta']
+[1.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/velocity_controller) by extension 'colcon_meta'
+[1.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/velocity_controller) by extensions ['ros']
+[1.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/velocity_controller) by extension 'ros'
+[1.277s] DEBUG:colcon.colcon_core.package_identification:Package 'src/velocity_controller' with type 'ros.ament_python' and name 'velocity_controller'
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/wheel_controller) by extensions ['ignore', 'ignore_ament_install']
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/wheel_controller) by extension 'ignore'
+[1.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/wheel_controller) by extension 'ignore_ament_install'
+[1.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/wheel_controller) by extensions ['colcon_pkg']
+[1.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/wheel_controller) by extension 'colcon_pkg'
+[1.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/wheel_controller) by extensions ['colcon_meta']
+[1.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/wheel_controller) by extension 'colcon_meta'
+[1.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/wheel_controller) by extensions ['ros']
+[1.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/wheel_controller) by extension 'ros'
+[1.282s] DEBUG:colcon.colcon_core.package_identification:Package 'src/wheel_controller' with type 'ros.ament_python' and name 'wheel_controller'
+[1.282s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.283s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.283s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.283s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.283s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.367s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'encoder_odometry' in 'src/encoder_odometry'
+[1.367s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'encoder_odometrytest' in 'src/encoder_odometrytest'
+[1.368s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'rplidar_ros' in 'src/rplidar_ros'
+[1.368s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'serial_coms' in 'src/serial_coms'
+[1.368s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'velocity_controller' in 'src/velocity_controller'
+[1.370s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.370s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.380s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/dora/dora_ros2_ws/robot_ws/install
+[1.387s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 204 installed packages in /opt/ros/humble
+[1.392s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.514s] Level 5:colcon.colcon_core.verb:set package 'wheel_controller' build argument 'cmake_args' from command line to 'None'
+[1.515s] Level 5:colcon.colcon_core.verb:set package 'wheel_controller' build argument 'cmake_target' from command line to 'None'
+[1.515s] Level 5:colcon.colcon_core.verb:set package 'wheel_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.515s] Level 5:colcon.colcon_core.verb:set package 'wheel_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[1.515s] Level 5:colcon.colcon_core.verb:set package 'wheel_controller' build argument 'cmake_clean_first' from command line to 'False'
+[1.515s] Level 5:colcon.colcon_core.verb:set package 'wheel_controller' build argument 'cmake_force_configure' from command line to 'False'
+[1.515s] Level 5:colcon.colcon_core.verb:set package 'wheel_controller' build argument 'ament_cmake_args' from command line to 'None'
+[1.515s] Level 5:colcon.colcon_core.verb:set package 'wheel_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[1.515s] Level 5:colcon.colcon_core.verb:set package 'wheel_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.515s] DEBUG:colcon.colcon_core.verb:Building package 'wheel_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dora/dora_ros2_ws/robot_ws/build/wheel_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller', 'merge_install': False, 'path': '/home/dora/dora_ros2_ws/robot_ws/src/wheel_controller', 'symlink_install': False, 'test_result_base': None}
+[1.516s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.520s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.520s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/dora/dora_ros2_ws/robot_ws/src/wheel_controller' with build type 'ament_python'
+[1.521s] Level 1:colcon.colcon_core.shell:create_environment_hook('wheel_controller', 'ament_prefix_path')
+[1.533s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.534s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/share/wheel_controller/hook/ament_prefix_path.ps1'
+[1.537s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/share/wheel_controller/hook/ament_prefix_path.dsv'
+[1.539s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/share/wheel_controller/hook/ament_prefix_path.sh'
+[1.542s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.542s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.795s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/dora/dora_ros2_ws/robot_ws/src/wheel_controller'
+[2.797s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.797s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.492s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dora/dora_ros2_ws/robot_ws/src/wheel_controller': PYTHONPATH=/home/dora/dora_ros2_ws/robot_ws/build/wheel_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/wheel_controller build --build-base /home/dora/dora_ros2_ws/robot_ws/build/wheel_controller/build install --record /home/dora/dora_ros2_ws/robot_ws/build/wheel_controller/install.log --single-version-externally-managed install_data
+[5.885s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dora/dora_ros2_ws/robot_ws/src/wheel_controller' returned '0': PYTHONPATH=/home/dora/dora_ros2_ws/robot_ws/build/wheel_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/wheel_controller build --build-base /home/dora/dora_ros2_ws/robot_ws/build/wheel_controller/build install --record /home/dora/dora_ros2_ws/robot_ws/build/wheel_controller/install.log --single-version-externally-managed install_data
+[5.896s] Level 1:colcon.colcon_core.environment:checking '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller' for CMake module files
+[5.898s] Level 1:colcon.colcon_core.environment:checking '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller' for CMake config files
+[5.902s] Level 1:colcon.colcon_core.environment:checking '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib'
+[5.903s] Level 1:colcon.colcon_core.environment:checking '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/bin'
+[5.904s] Level 1:colcon.colcon_core.environment:checking '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/pkgconfig/wheel_controller.pc'
+[5.905s] Level 1:colcon.colcon_core.environment:checking '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/lib/python3.10/site-packages'
+[5.905s] Level 1:colcon.colcon_core.shell:create_environment_hook('wheel_controller', 'pythonpath')
+[5.906s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/share/wheel_controller/hook/pythonpath.ps1'
+[5.908s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/share/wheel_controller/hook/pythonpath.dsv'
+[5.910s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/share/wheel_controller/hook/pythonpath.sh'
+[5.912s] Level 1:colcon.colcon_core.environment:checking '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/bin'
+[5.912s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wheel_controller)
+[5.914s] INFO:colcon.colcon_core.shell:Creating package script '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/share/wheel_controller/package.ps1'
+[5.917s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/share/wheel_controller/package.dsv'
+[5.920s] INFO:colcon.colcon_core.shell:Creating package script '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/share/wheel_controller/package.sh'
+[5.923s] INFO:colcon.colcon_core.shell:Creating package script '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/share/wheel_controller/package.bash'
+[5.927s] INFO:colcon.colcon_core.shell:Creating package script '/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/share/wheel_controller/package.zsh'
+[5.930s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dora/dora_ros2_ws/robot_ws/install/wheel_controller/share/colcon-core/packages/wheel_controller)
+[5.931s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.932s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.933s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.933s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.994s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.995s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.995s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'

@@ -1,0 +1,21 @@
+[9.216s] Invoking command in '/home/dora/dora_ros2_ws/robot_ws/src/serial_coms': PYTHONPATH=/home/dora/dora_ros2_ws/robot_ws/build/serial_coms/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/serial_coms build --build-base /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build install --record /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/install.log --single-version-externally-managed install_data
+[11.184s] running egg_info
+[11.187s] writing ../../build/serial_coms/serial_coms.egg-info/PKG-INFO
+[11.188s] writing dependency_links to ../../build/serial_coms/serial_coms.egg-info/dependency_links.txt
+[11.191s] writing entry points to ../../build/serial_coms/serial_coms.egg-info/entry_points.txt
+[11.194s] writing requirements to ../../build/serial_coms/serial_coms.egg-info/requires.txt
+[11.196s] writing top-level names to ../../build/serial_coms/serial_coms.egg-info/top_level.txt
+[11.212s] reading manifest file '../../build/serial_coms/serial_coms.egg-info/SOURCES.txt'
+[11.215s] adding license file 'LICENSE'
+[11.220s] writing manifest file '../../build/serial_coms/serial_coms.egg-info/SOURCES.txt'
+[11.222s] running build
+[11.223s] running build_py
+[11.227s] running install
+[11.230s] running install_lib
+[11.239s] running install_data
+[11.242s] running install_egg_info
+[11.252s] removing '/home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages/serial_coms-0.0.0-py3.10.egg-info' (and everything under it)
+[11.255s] Copying ../../build/serial_coms/serial_coms.egg-info to /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages/serial_coms-0.0.0-py3.10.egg-info
+[11.268s] running install_scripts
+[11.387s] writing list of installed files to '/home/dora/dora_ros2_ws/robot_ws/build/serial_coms/install.log'
+[12.130s] Invoked command in '/home/dora/dora_ros2_ws/robot_ws/src/serial_coms' returned '0': PYTHONPATH=/home/dora/dora_ros2_ws/robot_ws/build/serial_coms/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/serial_coms build --build-base /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build install --record /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/install.log --single-version-externally-managed install_data

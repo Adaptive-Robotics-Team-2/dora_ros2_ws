@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/serial_coms/serial_coms.egg-info
+writing ../../build/serial_coms/serial_coms.egg-info/PKG-INFO
+writing dependency_links to ../../build/serial_coms/serial_coms.egg-info/dependency_links.txt
+writing entry points to ../../build/serial_coms/serial_coms.egg-info/entry_points.txt
+writing requirements to ../../build/serial_coms/serial_coms.egg-info/requires.txt
+writing top-level names to ../../build/serial_coms/serial_coms.egg-info/top_level.txt
+writing manifest file '../../build/serial_coms/serial_coms.egg-info/SOURCES.txt'
+reading manifest file '../../build/serial_coms/serial_coms.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/serial_coms/serial_coms.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build
+creating /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build/lib
+creating /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build/lib/serial_coms
+copying serial_coms/__init__.py -> /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build/lib/serial_coms
+copying serial_coms/serial_node.py -> /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build/lib/serial_coms
+running install
+running install_lib
+creating /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages/serial_coms
+copying /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build/lib/serial_coms/__init__.py -> /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages/serial_coms
+copying /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build/lib/serial_coms/serial_node.py -> /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages/serial_coms
+byte-compiling /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages/serial_coms/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages/serial_coms/serial_node.py to serial_node.cpython-310.pyc
+running install_data
+creating /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/share/ament_index
+creating /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/share/ament_index/resource_index
+creating /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/share/ament_index/resource_index/packages
+copying resource/serial_coms -> /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/share/ament_index/resource_index/packages
+copying package.xml -> /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/share/serial_coms
+running install_egg_info
+Copying ../../build/serial_coms/serial_coms.egg-info to /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages/serial_coms-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/dora/dora_ros2_ws/robot_ws/build/serial_coms/install.log'

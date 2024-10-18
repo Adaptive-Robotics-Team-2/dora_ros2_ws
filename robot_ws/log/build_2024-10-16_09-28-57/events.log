@@ -1,0 +1,8 @@
+[0.000000] (-) TimerEvent: {}
+[0.001495] (-) JobUnselected: {'identifier': 'encoder_odometry'}
+[0.001817] (-) JobUnselected: {'identifier': 'encoder_odometrytest'}
+[0.001932] (-) JobUnselected: {'identifier': 'rplidar_ros'}
+[0.002060] (-) JobUnselected: {'identifier': 'serial_coms'}
+[0.002368] (-) JobUnselected: {'identifier': 'velocity_controller'}
+[0.002826] (-) JobUnselected: {'identifier': 'wheel_controller'}
+[0.002980] (-) EventReactorShutdown: {}

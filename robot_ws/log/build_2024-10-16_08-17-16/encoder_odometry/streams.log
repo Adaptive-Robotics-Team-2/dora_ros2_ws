@@ -1,0 +1,39 @@
+[8.095s] Invoking command in '/home/dora/dora_ros2_ws/robot_ws/src/encoder_odometry': PYTHONPATH=/home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/encoder_odometry build --build-base /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/build install --record /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/install.log --single-version-externally-managed install_data
+[9.732s] running egg_info
+[9.735s] creating ../../build/encoder_odometry/encoder_odometry.egg-info
+[9.739s] writing ../../build/encoder_odometry/encoder_odometry.egg-info/PKG-INFO
+[9.741s] writing dependency_links to ../../build/encoder_odometry/encoder_odometry.egg-info/dependency_links.txt
+[9.742s] writing entry points to ../../build/encoder_odometry/encoder_odometry.egg-info/entry_points.txt
+[9.742s] writing requirements to ../../build/encoder_odometry/encoder_odometry.egg-info/requires.txt
+[9.743s] writing top-level names to ../../build/encoder_odometry/encoder_odometry.egg-info/top_level.txt
+[9.744s] writing manifest file '../../build/encoder_odometry/encoder_odometry.egg-info/SOURCES.txt'
+[9.752s] reading manifest file '../../build/encoder_odometry/encoder_odometry.egg-info/SOURCES.txt'
+[9.756s] writing manifest file '../../build/encoder_odometry/encoder_odometry.egg-info/SOURCES.txt'
+[9.757s] running build
+[9.759s] running build_py
+[9.760s] creating /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/build
+[9.760s] creating /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/build/lib
+[9.761s] creating /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/build/lib/encoder_odometry
+[9.762s] copying encoder_odometry/__init__.py -> /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/build/lib/encoder_odometry
+[9.763s] copying encoder_odometry/encoder_to_odom.py -> /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/build/lib/encoder_odometry
+[9.764s] running install
+[9.764s] running install_lib
+[9.769s] creating /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages/encoder_odometry
+[9.770s] copying /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/build/lib/encoder_odometry/__init__.py -> /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages/encoder_odometry
+[9.770s] copying /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/build/lib/encoder_odometry/encoder_to_odom.py -> /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages/encoder_odometry
+[9.772s] byte-compiling /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages/encoder_odometry/__init__.py to __init__.cpython-310.pyc
+[9.774s] byte-compiling /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages/encoder_odometry/encoder_to_odom.py to encoder_to_odom.cpython-310.pyc
+[9.784s] running install_data
+[9.785s] creating /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/share/ament_index
+[9.786s] creating /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/share/ament_index/resource_index
+[9.787s] creating /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/share/ament_index/resource_index/packages
+[9.788s] copying resource/encoder_odometry -> /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/share/ament_index/resource_index/packages
+[9.789s] copying package.xml -> /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/share/encoder_odometry
+[9.790s] creating /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/share/encoder_odometry/launch
+[9.790s] copying launch/robot_launch.py -> /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/share/encoder_odometry/launch
+[9.791s] running install_egg_info
+[9.798s] Copying ../../build/encoder_odometry/encoder_odometry.egg-info to /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages/encoder_odometry-0.0.0-py3.10.egg-info
+[9.807s] running install_scripts
+[9.926s] Installing encoder_to_odom script to /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/encoder_odometry
+[9.928s] writing list of installed files to '/home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/install.log'
+[10.176s] Invoked command in '/home/dora/dora_ros2_ws/robot_ws/src/encoder_odometry' returned '0': PYTHONPATH=/home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/encoder_odometry build --build-base /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/build install --record /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/install.log --single-version-externally-managed install_data

@@ -1,0 +1,37 @@
+running egg_info
+creating ../../build/encoder_odometry/encoder_odometry.egg-info
+writing ../../build/encoder_odometry/encoder_odometry.egg-info/PKG-INFO
+writing dependency_links to ../../build/encoder_odometry/encoder_odometry.egg-info/dependency_links.txt
+writing entry points to ../../build/encoder_odometry/encoder_odometry.egg-info/entry_points.txt
+writing requirements to ../../build/encoder_odometry/encoder_odometry.egg-info/requires.txt
+writing top-level names to ../../build/encoder_odometry/encoder_odometry.egg-info/top_level.txt
+writing manifest file '../../build/encoder_odometry/encoder_odometry.egg-info/SOURCES.txt'
+reading manifest file '../../build/encoder_odometry/encoder_odometry.egg-info/SOURCES.txt'
+writing manifest file '../../build/encoder_odometry/encoder_odometry.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/build
+creating /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/build/lib
+creating /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/build/lib/encoder_odometry
+copying encoder_odometry/__init__.py -> /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/build/lib/encoder_odometry
+copying encoder_odometry/encoder_to_odom.py -> /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/build/lib/encoder_odometry
+running install
+running install_lib
+creating /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages/encoder_odometry
+copying /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/build/lib/encoder_odometry/__init__.py -> /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages/encoder_odometry
+copying /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/build/lib/encoder_odometry/encoder_to_odom.py -> /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages/encoder_odometry
+byte-compiling /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages/encoder_odometry/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages/encoder_odometry/encoder_to_odom.py to encoder_to_odom.cpython-310.pyc
+running install_data
+creating /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/share/ament_index
+creating /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/share/ament_index/resource_index
+creating /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/share/ament_index/resource_index/packages
+copying resource/encoder_odometry -> /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/share/ament_index/resource_index/packages
+copying package.xml -> /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/share/encoder_odometry
+creating /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/share/encoder_odometry/launch
+copying launch/robot_launch.py -> /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/share/encoder_odometry/launch
+running install_egg_info
+Copying ../../build/encoder_odometry/encoder_odometry.egg-info to /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/python3.10/site-packages/encoder_odometry-0.0.0-py3.10.egg-info
+running install_scripts
+Installing encoder_to_odom script to /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometry/lib/encoder_odometry
+writing list of installed files to '/home/dora/dora_ros2_ws/robot_ws/build/encoder_odometry/install.log'

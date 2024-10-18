@@ -1,0 +1,21 @@
+[9.274s] Invoking command in '/home/dora/dora_ros2_ws/robot_ws/src/encoder_odometrytest': PYTHONPATH=/home/dora/dora_ros2_ws/robot_ws/build/encoder_odometrytest/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/encoder_odometrytest build --build-base /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometrytest/build install --record /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometrytest/install.log --single-version-externally-managed install_data
+[11.282s] running egg_info
+[11.291s] writing ../../build/encoder_odometrytest/encoder_odometrytest.egg-info/PKG-INFO
+[11.294s] writing dependency_links to ../../build/encoder_odometrytest/encoder_odometrytest.egg-info/dependency_links.txt
+[11.326s] writing entry points to ../../build/encoder_odometrytest/encoder_odometrytest.egg-info/entry_points.txt
+[11.329s] writing requirements to ../../build/encoder_odometrytest/encoder_odometrytest.egg-info/requires.txt
+[11.335s] writing top-level names to ../../build/encoder_odometrytest/encoder_odometrytest.egg-info/top_level.txt
+[11.347s] reading manifest file '../../build/encoder_odometrytest/encoder_odometrytest.egg-info/SOURCES.txt'
+[11.356s] writing manifest file '../../build/encoder_odometrytest/encoder_odometrytest.egg-info/SOURCES.txt'
+[11.359s] running build
+[11.360s] running build_py
+[11.363s] running install
+[11.366s] running install_lib
+[11.377s] running install_data
+[11.379s] running install_egg_info
+[11.392s] removing '/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest/lib/python3.10/site-packages/encoder_odometrytest-0.0.0-py3.10.egg-info' (and everything under it)
+[11.403s] Copying ../../build/encoder_odometrytest/encoder_odometrytest.egg-info to /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest/lib/python3.10/site-packages/encoder_odometrytest-0.0.0-py3.10.egg-info
+[11.433s] running install_scripts
+[11.569s] Installing encoder_to_odom script to /home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest/lib/encoder_odometrytest
+[11.577s] writing list of installed files to '/home/dora/dora_ros2_ws/robot_ws/build/encoder_odometrytest/install.log'
+[12.133s] Invoked command in '/home/dora/dora_ros2_ws/robot_ws/src/encoder_odometrytest' returned '0': PYTHONPATH=/home/dora/dora_ros2_ws/robot_ws/build/encoder_odometrytest/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/encoder_odometrytest/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/encoder_odometrytest build --build-base /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometrytest/build install --record /home/dora/dora_ros2_ws/robot_ws/build/encoder_odometrytest/install.log --single-version-externally-managed install_data

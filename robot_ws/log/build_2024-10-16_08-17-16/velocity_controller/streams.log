@@ -1,0 +1,40 @@
+[11.313s] Invoking command in '/home/dora/dora_ros2_ws/robot_ws/src/velocity_controller': PYTHONPATH=/home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/velocity_controller build --build-base /home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/build install --record /home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/install.log --single-version-externally-managed install_data
+[16.653s] running egg_info
+[16.672s] creating ../../build/velocity_controller/velocity_controller.egg-info
+[16.676s] writing ../../build/velocity_controller/velocity_controller.egg-info/PKG-INFO
+[16.677s] writing dependency_links to ../../build/velocity_controller/velocity_controller.egg-info/dependency_links.txt
+[16.682s] writing entry points to ../../build/velocity_controller/velocity_controller.egg-info/entry_points.txt
+[16.684s] writing requirements to ../../build/velocity_controller/velocity_controller.egg-info/requires.txt
+[16.687s] writing top-level names to ../../build/velocity_controller/velocity_controller.egg-info/top_level.txt
+[16.688s] writing manifest file '../../build/velocity_controller/velocity_controller.egg-info/SOURCES.txt'
+[16.707s] reading manifest file '../../build/velocity_controller/velocity_controller.egg-info/SOURCES.txt'
+[16.719s] writing manifest file '../../build/velocity_controller/velocity_controller.egg-info/SOURCES.txt'
+[16.724s] running build
+[16.725s] running build_py
+[16.726s] creating /home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/build
+[16.735s] creating /home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/build/lib
+[16.737s] creating /home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/build/lib/velocity_controller
+[16.738s] copying velocity_controller/velocity_controller.py -> /home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/build/lib/velocity_controller
+[16.741s] copying velocity_controller/__init__.py -> /home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/build/lib/velocity_controller
+[16.741s] running install
+[16.744s] running install_lib
+[16.760s] creating /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages/velocity_controller
+[16.761s] copying /home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/build/lib/velocity_controller/velocity_controller.py -> /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages/velocity_controller
+[16.762s] copying /home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/build/lib/velocity_controller/__init__.py -> /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages/velocity_controller
+[16.766s] byte-compiling /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages/velocity_controller/velocity_controller.py to velocity_controller.cpython-310.pyc
+[16.773s] byte-compiling /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages/velocity_controller/__init__.py to __init__.cpython-310.pyc
+[16.775s] running install_data
+[16.777s] creating /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/share/ament_index
+[16.778s] creating /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/share/ament_index/resource_index
+[16.784s] creating /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/share/ament_index/resource_index/packages
+[16.786s] copying resource/velocity_controller -> /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/share/ament_index/resource_index/packages
+[16.788s] copying package.xml -> /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/share/velocity_controller
+[16.789s] creating /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/share/velocity_controller/launch
+[16.792s] copying launch/velocity_controller.launch.py -> /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/share/velocity_controller/launch
+[16.793s] creating /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/share/velocity_controller/description
+[16.802s] running install_egg_info
+[16.821s] Copying ../../build/velocity_controller/velocity_controller.egg-info to /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages/velocity_controller-0.0.0-py3.10.egg-info
+[16.852s] running install_scripts
+[17.134s] Installing velocity_controller script to /home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/velocity_controller
+[17.140s] writing list of installed files to '/home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/install.log'
+[17.497s] Invoked command in '/home/dora/dora_ros2_ws/robot_ws/src/velocity_controller' returned '0': PYTHONPATH=/home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/velocity_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/velocity_controller build --build-base /home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/build install --record /home/dora/dora_ros2_ws/robot_ws/build/velocity_controller/install.log --single-version-externally-managed install_data

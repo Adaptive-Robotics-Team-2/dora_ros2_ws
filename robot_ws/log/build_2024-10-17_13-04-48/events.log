@@ -1,0 +1,21 @@
+[0.000000] (-) TimerEvent: {}
+[0.002340] (-) JobUnselected: {'identifier': 'encoder_odometry'}
+[0.003085] (-) JobUnselected: {'identifier': 'encoder_odometrytest'}
+[0.003547] (-) JobUnselected: {'identifier': 'rplidar_ros'}
+[0.003730] (-) JobUnselected: {'identifier': 'serial_coms'}
+[0.004002] (-) JobUnselected: {'identifier': 'velocity_controller'}
+[0.004167] (wheel_controller) JobQueued: {'identifier': 'wheel_controller', 'dependencies': OrderedDict()}
+[0.004267] (wheel_controller) JobStarted: {'identifier': 'wheel_controller'}
+[0.098969] (-) TimerEvent: {}
+[0.199799] (-) TimerEvent: {}
+[0.300648] (-) TimerEvent: {}
+[0.401388] (-) TimerEvent: {}
+[0.502080] (-) TimerEvent: {}
+[0.602784] (-) TimerEvent: {}
+[0.703459] (-) TimerEvent: {}
+[0.804152] (-) TimerEvent: {}
+[0.904782] (-) TimerEvent: {}
+[1.005495] (-) TimerEvent: {}
+[1.106182] (-) TimerEvent: {}
+[1.133749] (wheel_controller) JobEnded: {'identifier': 'wheel_controller', 'rc': 0}
+[1.136754] (-) EventReactorShutdown: {}

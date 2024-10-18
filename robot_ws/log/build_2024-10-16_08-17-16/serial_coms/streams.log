@@ -1,0 +1,37 @@
+[7.792s] Invoking command in '/home/dora/dora_ros2_ws/robot_ws/src/serial_coms': PYTHONPATH=/home/dora/dora_ros2_ws/robot_ws/build/serial_coms/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/serial_coms build --build-base /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build install --record /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/install.log --single-version-externally-managed install_data
+[9.520s] running egg_info
+[9.522s] creating ../../build/serial_coms/serial_coms.egg-info
+[9.523s] writing ../../build/serial_coms/serial_coms.egg-info/PKG-INFO
+[9.524s] writing dependency_links to ../../build/serial_coms/serial_coms.egg-info/dependency_links.txt
+[9.525s] writing entry points to ../../build/serial_coms/serial_coms.egg-info/entry_points.txt
+[9.526s] writing requirements to ../../build/serial_coms/serial_coms.egg-info/requires.txt
+[9.527s] writing top-level names to ../../build/serial_coms/serial_coms.egg-info/top_level.txt
+[9.529s] writing manifest file '../../build/serial_coms/serial_coms.egg-info/SOURCES.txt'
+[9.538s] reading manifest file '../../build/serial_coms/serial_coms.egg-info/SOURCES.txt'
+[9.540s] adding license file 'LICENSE'
+[9.542s] writing manifest file '../../build/serial_coms/serial_coms.egg-info/SOURCES.txt'
+[9.543s] running build
+[9.545s] running build_py
+[9.545s] creating /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build
+[9.546s] creating /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build/lib
+[9.547s] creating /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build/lib/serial_coms
+[9.548s] copying serial_coms/__init__.py -> /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build/lib/serial_coms
+[9.548s] copying serial_coms/serial_node.py -> /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build/lib/serial_coms
+[9.549s] running install
+[9.550s] running install_lib
+[9.553s] creating /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages/serial_coms
+[9.558s] copying /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build/lib/serial_coms/__init__.py -> /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages/serial_coms
+[9.559s] copying /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build/lib/serial_coms/serial_node.py -> /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages/serial_coms
+[9.560s] byte-compiling /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages/serial_coms/__init__.py to __init__.cpython-310.pyc
+[9.560s] byte-compiling /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages/serial_coms/serial_node.py to serial_node.cpython-310.pyc
+[9.562s] running install_data
+[9.570s] creating /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/share/ament_index
+[9.571s] creating /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/share/ament_index/resource_index
+[9.571s] creating /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/share/ament_index/resource_index/packages
+[9.572s] copying resource/serial_coms -> /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/share/ament_index/resource_index/packages
+[9.573s] copying package.xml -> /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/share/serial_coms
+[9.573s] running install_egg_info
+[9.581s] Copying ../../build/serial_coms/serial_coms.egg-info to /home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages/serial_coms-0.0.0-py3.10.egg-info
+[9.615s] running install_scripts
+[9.741s] writing list of installed files to '/home/dora/dora_ros2_ws/robot_ws/build/serial_coms/install.log'
+[10.371s] Invoked command in '/home/dora/dora_ros2_ws/robot_ws/src/serial_coms' returned '0': PYTHONPATH=/home/dora/dora_ros2_ws/robot_ws/build/serial_coms/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dora/dora_ros2_ws/robot_ws/install/serial_coms/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/serial_coms build --build-base /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/build install --record /home/dora/dora_ros2_ws/robot_ws/build/serial_coms/install.log --single-version-externally-managed install_data
